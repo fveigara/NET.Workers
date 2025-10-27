@@ -35,9 +35,11 @@ namespace GenteFit
         {
             using (var db = new GenteFitContext())
             {
+                var socios = db.Socios.ToList(); // <- fuerza la ejecución en memoria
+
                 var doc = new XDocument(
                     new XElement("Socios",
-                        db.Socios.Select(s =>
+                        socios.Select(s =>
                             new XElement("Socio",
                                 new XElement("Id", s.Id),
                                 new XElement("Nombre", s.Nombre),
@@ -50,6 +52,6 @@ namespace GenteFit
                 doc.Save(rutaSalida);
             }
         }
-    }
 
+    }
 }
