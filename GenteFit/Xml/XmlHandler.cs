@@ -43,7 +43,7 @@ namespace GenteFit
         {
             using (var db = new GenteFitContext())
             {
-                // 🔹 Cargar los socios desde la base de datos
+                // Cargar los socios desde la base de datos
                 var listaSocios = db.Socios.AsEnumerable().ToList();
                 Console.WriteLine($"Socios encontrados en la BD: {listaSocios.Count}");
 
@@ -53,14 +53,14 @@ namespace GenteFit
                     return;
                 }
 
-                // 🔹 Crear la carpeta si no existe
+                // Crear la carpeta si no existe
                 var directorio = System.IO.Path.GetDirectoryName(rutaSalida);
                 if (!System.IO.Directory.Exists(directorio))
                 {
                     System.IO.Directory.CreateDirectory(directorio);
                 }
 
-                // 🔹 Crear el XML
+                // Crear el XML
                 var doc = new XDocument(
                     new XElement("Socios",
                         listaSocios.Select(s => new XElement("Socio",
@@ -72,13 +72,12 @@ namespace GenteFit
                     )
                 );
 
-                // 🔹 Guardar el archivo
+                // Guardar el archivo
                 var rutaCompleta = System.IO.Path.GetFullPath(rutaSalida);
                 doc.Save(rutaCompleta);
 
                 Console.WriteLine($"Socios exportados a XML correctamente en:\n{rutaCompleta}");
             }
         }
-
     }
 }
