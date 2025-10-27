@@ -1,0 +1,15 @@
+C:\Users\mulir\Source\Repos\NET.Workers\GenteFit\bin\Debug\GenteFit.exe.config
+C:\Users\mulir\Source\Repos\NET.Workers\GenteFit\bin\Debug\GenteFit.exe
+C:\Users\mulir\Source\Repos\NET.Workers\GenteFit\bin\Debug\GenteFit.pdb
+C:\Users\mulir\Source\Repos\NET.Workers\GenteFit\bin\Debug\EntityFramework.dll
+C:\Users\mulir\Source\Repos\NET.Workers\GenteFit\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mulir\Source\Repos\NET.Workers\GenteFit\bin\Debug\EntityFramework.xml
+C:\Users\mulir\Source\Repos\NET.Workers\GenteFit\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mulir\Source\Repos\NET.Workers\GenteFit\obj\Debug\GenteFit.csproj.AssemblyReference.cache
+C:\Users\mulir\Source\Repos\NET.Workers\GenteFit\obj\Debug\GenteFit.Properties.Resources.resources
+C:\Users\mulir\Source\Repos\NET.Workers\GenteFit\obj\Debug\GenteFit.csproj.GenerateResource.cache
+C:\Users\mulir\Source\Repos\NET.Workers\GenteFit\obj\Debug\GenteFit.csproj.CoreCompileInputs.cache
+C:\Users\mulir\Source\Repos\NET.Workers\GenteFit\obj\Debug\GenteFit.csproj.Up2Date
+C:\Users\mulir\Source\Repos\NET.Workers\GenteFit\obj\Debug\GenteFit.exe
+C:\Users\mulir\Source\Repos\NET.Workers\GenteFit\obj\Debug\GenteFit.pdb
+C:\Users\mulir\Source\Repos\NET.Workers\GenteFit\obj\Debug\GenteFit.Migrations.Inicial.resources
