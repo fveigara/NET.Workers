@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Socios>
+	<Socio>
+		<Nombre>Ferran Veiga</Nombre>
+		<Email>ferran@example.com</Email>
+		<FechaAlta>2025-10-01</FechaAlta>
+	</Socio>
+	<Socio>
+		<Nombre>Alex Moliner</Nombre>
+		<Email>alex@example.com</Email>
+		<FechaAlta>2025-09-15</FechaAlta>
+	</Socio>
+</Socios>
