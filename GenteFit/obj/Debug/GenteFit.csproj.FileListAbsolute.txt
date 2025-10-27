@@ -13,6 +13,7 @@ C:\Users\mulir\Source\Repos\NET.Workers\GenteFit\obj\Debug\GenteFit.csproj.Up2Da
 C:\Users\mulir\Source\Repos\NET.Workers\GenteFit\obj\Debug\GenteFit.exe
 C:\Users\mulir\Source\Repos\NET.Workers\GenteFit\obj\Debug\GenteFit.pdb
 C:\Users\mulir\Source\Repos\NET.Workers\GenteFit\obj\Debug\GenteFit.Migrations.Inicial.resources
+<<<<<<< HEAD
 C:\Users\Ferran\source\repos\fveigara\NET.Workers\GenteFit\bin\Debug\GenteFit.exe.config
 C:\Users\Ferran\source\repos\fveigara\NET.Workers\GenteFit\bin\Debug\GenteFit.exe
 C:\Users\Ferran\source\repos\fveigara\NET.Workers\GenteFit\bin\Debug\GenteFit.pdb
@@ -30,3 +31,6 @@ C:\Users\Ferran\source\repos\fveigara\NET.Workers\GenteFit\obj\Debug\GenteFit.cs
 C:\Users\Ferran\source\repos\fveigara\NET.Workers\GenteFit\obj\Debug\GenteFit.exe
 C:\Users\Ferran\source\repos\fveigara\NET.Workers\GenteFit\obj\Debug\GenteFit.pdb
 C:\Users\Ferran\source\repos\fveigara\NET.Workers\GenteFit\bin\Debug\Xml\socios.xml
+=======
+C:\Users\mulir\source\repos\NET.Workers\GenteFit\bin\Debug\Xml\socios.xml
+>>>>>>> Alex
