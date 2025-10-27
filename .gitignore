@@ -1,0 +1,31 @@
+# Visual Studio / .NET GitIgnore
+
+# Archivos de usuario
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Carpetas de configuración y temporales
+.vs/
+bin/
+obj/
+packages/
+TestResults/
+Backup*/
+*.cache
+*.pdb
+*.dbmdl
+*.log
+
+# Archivos del sistema
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*.tmp
+*.bak
+
+# Configuración local
+*.local
+*.config.user
