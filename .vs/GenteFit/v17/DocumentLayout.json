@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\mulir\\source\\repos\\NET.Workers\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|C:\\Users\\mulir\\source\\repos\\NET.Workers\\gentefit\\xml\\xmlhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|c:\\users\\mulir\\source\\repos\\net.workers\\gentefit\\xml\\xmlhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\xml\\xmlhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|c:\\users\\mulir\\source\\repos\\net.workers\\gentefit\\data\\gentefitcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|C:\\Users\\mulir\\source\\repos\\NET.Workers\\gentefit\\data\\gentefitcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\data\\gentefitcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -70,8 +70,7 @@
               "RelativeToolTip": "GenteFit\\Models\\Producto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T16:47:55.819Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-27T16:47:55.819Z"
             },
             {
               "$type": "Document",
@@ -83,8 +82,7 @@
               "RelativeToolTip": "GenteFit\\Models\\Socio.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T16:47:31.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-27T16:47:31.729Z"
             },
             {
               "$type": "Document",
@@ -116,9 +114,9 @@
               "Title": "XmlHandler.cs",
               "DocumentMoniker": "C:\\Users\\mulir\\source\\repos\\NET.Workers\\GenteFit\\Xml\\XmlHandler.cs",
               "RelativeDocumentMoniker": "GenteFit\\Xml\\XmlHandler.cs",
-              "ToolTip": "C:\\Users\\mulir\\source\\repos\\NET.Workers\\GenteFit\\Xml\\XmlHandler.cs",
-              "RelativeToolTip": "GenteFit\\Xml\\XmlHandler.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAwwFAAAAAJAAAA",
+              "ToolTip": "C:\\Users\\mulir\\source\\repos\\NET.Workers\\GenteFit\\Xml\\XmlHandler.cs*",
+              "RelativeToolTip": "GenteFit\\Xml\\XmlHandler.cs*",
+              "ViewState": "AQIAACoAAAAAAAAAAAAIwFAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-27T16:51:28.442Z",
               "EditorCaption": ""
@@ -133,8 +131,7 @@
               "RelativeToolTip": "GenteFit\\Data\\GenteFitContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T16:48:28.933Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-27T16:48:28.933Z"
             },
             {
               "$type": "Document",
