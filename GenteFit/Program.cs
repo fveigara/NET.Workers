@@ -9,54 +9,50 @@ using System.Windows.Forms;
 
 namespace GenteFit
 {
-    class Program
+    internal static class Program
     {
-        [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-            // Sustituir "using var db = new GenteFitContext();" por el patrón clásico try-finally/dispose
-            GenteFitContext db = null;
-            try
-            {
-                db = new GenteFitContext();
+            // 🔹 Obtener la ruta base del proyecto (tres niveles arriba de bin\Debug)
+            string rutaBase = AppDomain.CurrentDomain.BaseDirectory;
+            string rutaXmlImport = System.IO.Path.Combine(rutaBase, @"..\..\..\Xml\socios.xml");
+            string rutaXmlExport = System.IO.Path.Combine(rutaBase, @"..\..\..\Xml\socios_exportados.xml");
 
-                // ALTA
+            using (var db = new GenteFitContext())
+            {
+                // --- ALTA ---
                 var s1 = new Socio { Nombre = "Nuevo Socio", Email = "nuevo@socio.com", FechaAlta = DateTime.Now };
                 db.Socios.Add(s1);
                 db.SaveChanges();
-                Console.WriteLine($"Alta Socio Id={s1.Id}");
+                Console.WriteLine($"Alta de socio Id={s1.Id}");
 
-                // CONSULTA
+                // --- CONSULTA ---
                 var socios = db.Socios.ToList();
                 Console.WriteLine($"Socios en BD: {socios.Count}");
 
-                // MODIFICACION
+                // --- MODIFICACIÓN ---
                 var socio = db.Socios.First();
                 socio.Email = "modificado@socio.com";
                 db.SaveChanges();
                 Console.WriteLine("Email actualizado");
 
-                // BAJA
+                // --- BAJA ---
                 db.Socios.Remove(socio);
                 db.SaveChanges();
                 Console.WriteLine("Socio eliminado");
 
-                // IMPORTAR XML
-                XmlHandler.ImportarSociosDesdeXml("Xml/socios.xml");
+                // --- IMPORTAR XML ---
+                XmlHandler.ImportarSociosDesdeXml(rutaXmlImport);
+                Console.WriteLine("Socios importados desde XML.");
 
-                // EXPORTAR XML
-                XmlHandler.ExportarSociosAXml("Xml/socios_salida.xml");
+                // --- EXPORTAR XML ---
+                XmlHandler.ExportarSociosAXml(rutaXmlExport);
+                Console.WriteLine("Socios exportados a XML.");
+            }
 
-                Console.WriteLine("Demo completa en .NET 4.8");
-            }
-            finally
-            {
-                if (db != null)
-                    db.Dispose();
-            }
+            Console.WriteLine("\nEjecución completa en .NET Framework 4.8");
+            Console.WriteLine("Presiona una tecla para salir...");
+            Console.ReadKey();
         }
     }
 }

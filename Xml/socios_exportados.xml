@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Socios>
+  <Socio>
+    <Id>23</Id>
+    <Nombre>Nuevo Socio</Nombre>
+    <Email>nuevo@socio.com</Email>
+    <FechaAlta>2025-10-27T20:58:03.2770000</FechaAlta>
+  </Socio>
+  <Socio>
+    <Id>24</Id>
+    <Nombre>Ferran Veiga</Nombre>
+    <Email>ferran@example.com</Email>
+    <FechaAlta>2025-10-01T00:00:00.0000000</FechaAlta>
+  </Socio>
+  <Socio>
+    <Id>25</Id>
+    <Nombre>Alex Moliner</Nombre>
+    <Email>alex@example.com</Email>
+    <FechaAlta>2025-09-15T00:00:00.0000000</FechaAlta>
+  </Socio>
+  <Socio>
+    <Id>26</Id>
+    <Nombre>Nuevo Socio</Nombre>
+    <Email>nuevo@socio.com</Email>
+    <FechaAlta>2025-10-27T20:59:01.5400000</FechaAlta>
+  </Socio>
+  <Socio>
+    <Id>27</Id>
+    <Nombre>Ferran Veiga</Nombre>
+    <Email>ferran@example.com</Email>
+    <FechaAlta>2025-10-01T00:00:00.0000000</FechaAlta>
+  </Socio>
+  <Socio>
+    <Id>28</Id>
+    <Nombre>Alex Moliner</Nombre>
+    <Email>alex@example.com</Email>
+    <FechaAlta>2025-09-15T00:00:00.0000000</FechaAlta>
+  </Socio>
+  <Socio>
+    <Id>29</Id>
+    <Nombre>Nuevo Socio</Nombre>
+    <Email>nuevo@socio.com</Email>
+    <FechaAlta>2025-10-27T21:03:12.4630000</FechaAlta>
+  </Socio>
+  <Socio>
+    <Id>30</Id>
+    <Nombre>Ferran Veiga</Nombre>
+    <Email>ferran@example.com</Email>
+    <FechaAlta>2025-10-01T00:00:00.0000000</FechaAlta>
+  </Socio>
+  <Socio>
+    <Id>31</Id>
+    <Nombre>Alex Moliner</Nombre>
+    <Email>alex@example.com</Email>
+    <FechaAlta>2025-09-15T00:00:00.0000000</FechaAlta>
+  </Socio>
+  <Socio>
+    <Id>32</Id>
+    <Nombre>Nuevo Socio</Nombre>
+    <Email>nuevo@socio.com</Email>
+    <FechaAlta>2025-10-27T21:04:20.4430000</FechaAlta>
+  </Socio>
+  <Socio>
+    <Id>33</Id>
+    <Nombre>Ferran Veiga</Nombre>
+    <Email>ferran@example.com</Email>
+    <FechaAlta>2025-10-01T00:00:00.0000000</FechaAlta>
+  </Socio>
+  <Socio>
+    <Id>34</Id>
+    <Nombre>Alex Moliner</Nombre>
+    <Email>alex@example.com</Email>
+    <FechaAlta>2025-09-15T00:00:00.0000000</FechaAlta>
+  </Socio>
+  <Socio>
+    <Id>35</Id>
+    <Nombre>Nuevo Socio</Nombre>
+    <Email>nuevo@socio.com</Email>
+    <FechaAlta>2025-10-27T21:04:52.2870000</FechaAlta>
+  </Socio>
+  <Socio>
+    <Id>36</Id>
+    <Nombre>Ferran Veiga</Nombre>
+    <Email>ferran@example.com</Email>
+    <FechaAlta>2025-10-01T00:00:00.0000000</FechaAlta>
+  </Socio>
+  <Socio>
+    <Id>37</Id>
+    <Nombre>Alex Moliner</Nombre>
+    <Email>alex@example.com</Email>
+    <FechaAlta>2025-09-15T00:00:00.0000000</FechaAlta>
+  </Socio>
+  <Socio>
+    <Id>38</Id>
+    <Nombre>Nuevo Socio</Nombre>
+    <Email>nuevo@socio.com</Email>
+    <FechaAlta>2025-10-27T21:08:34.0170000</FechaAlta>
+  </Socio>
+  <Socio>
+    <Id>39</Id>
+    <Nombre>Nuevo Socio</Nombre>
+    <Email>nuevo@socio.com</Email>
+    <FechaAlta>2025-10-27T21:09:03.0400000</FechaAlta>
+  </Socio>
+  <Socio>
+    <Id>40</Id>
+    <Nombre>Nuevo Socio</Nombre>
+    <Email>nuevo@socio.com</Email>
+    <FechaAlta>2025-10-27T21:10:05.0930000</FechaAlta>
+  </Socio>
+</Socios>
