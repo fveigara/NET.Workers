@@ -1,8 +1,8 @@
-﻿namespace GenteFit.Migrations
+﻿using System;
+using System.Data.Entity.Migrations;
+
+namespace GenteFit.Migrations
 {
-    using System;
-    using System.Data.Entity.Migrations;
-    
     public partial class Inicial : DbMigration
     {
         public override void Up()

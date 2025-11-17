@@ -17,7 +17,7 @@ namespace GenteFit
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            // Sustituir "using var db = new GenteFitContext();" por el patrón clásico try-finally/dispose
+            // Substituir "using var db = new GenteFitContext();" por el patrón clásico try-finally/dispose
             GenteFitContext db = null;
             try
             {
@@ -45,10 +45,10 @@ namespace GenteFit
                 Console.WriteLine("Socio eliminado");
 
                 // IMPORTAR XML
-                XmlHandler.ImportarSociosDesdeXml("Xml/socios.xml");
+                Xml.XmlHandler.ImportarSociosDesdeXml("Xml/socios.xml");
 
                 // EXPORTAR XML
-                XmlHandler.ExportarSociosAXml("Xml/socios_salida.xml");
+                Xml.XmlHandler.ExportarSociosAXml("Xml/socios.xml");
 
                 Console.WriteLine("Demo completa en .NET 4.8");
             }

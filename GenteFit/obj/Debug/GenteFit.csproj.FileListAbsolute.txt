@@ -30,3 +30,4 @@ C:\Users\Ferran\source\repos\fveigara\NET.Workers\GenteFit\obj\Debug\GenteFit.cs
 C:\Users\Ferran\source\repos\fveigara\NET.Workers\GenteFit\obj\Debug\GenteFit.exe
 C:\Users\Ferran\source\repos\fveigara\NET.Workers\GenteFit\obj\Debug\GenteFit.pdb
 C:\Users\Ferran\source\repos\fveigara\NET.Workers\GenteFit\bin\Debug\Xml\socios.xml
+C:\Users\Ferran\source\repos\fveigara\NET.Workers\GenteFit\bin\Debug\Xml\socios_salida.xml
