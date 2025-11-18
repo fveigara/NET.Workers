@@ -156,11 +156,11 @@
   </Target>
   <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
   <ItemGroup>
-  <Reference Include="ClosedXML">
-    <HintPath>ClosedXML.0.102.0\lib\net40\ClosedXML.dll</HintPath>
-  </Reference>
-  <Reference Include="DocumentFormat.OpenXml">
-    <HintPath>ClosedXML.0.102.0\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
-  </Reference>
-</ItemGroup>
+    <Reference Include="ClosedXML">
+      <HintPath>ClosedXML.0.102.0\lib\net40\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>ClosedXML.0.102.0\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

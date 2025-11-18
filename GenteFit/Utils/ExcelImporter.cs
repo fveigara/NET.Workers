@@ -53,7 +53,7 @@ namespace GenteFit.Utils
                     lista.Add(new Producto
                     {
                         Nombre = row.Cell(2).GetString(),
-                        Precio = row.Cell(3).GetDecimal()
+                        Precio = Convert.ToDecimal(row.Cell(3).Value)
                     });
                 }
             }
