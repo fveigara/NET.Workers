@@ -44,11 +44,11 @@ namespace GenteFit
                 db.SaveChanges();
                 Console.WriteLine("Socio eliminado");
 
-                // IMPORTAR XML
-                Xml.XmlHandler.ImportarSociosDesdeXml("Xml/socios.xml");
+                // IMPORTAR Excel
+                Utils.ExcelImporter.ImportSocios("Excel/socios.xlsx");
 
-                // EXPORTAR XML
-                Xml.XmlHandler.ExportarSociosAXml("Xml/socios.xml");
+                // EXPORTAR Excel
+                Utils.ExcelExporter.ExportSocios("Excel/socios_exportados.xlsx", socios);
 
                 Console.WriteLine("Demo completa en .NET 4.8");
             }

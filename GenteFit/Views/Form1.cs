@@ -2,7 +2,6 @@
 using GenteFit.Data;
 using GenteFit.Models;
 using GenteFit.Utils;
-using GenteFit.Xml;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
