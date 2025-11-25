@@ -43,7 +43,6 @@ C:\Users\Ferran\source\repos\NET.Workers\GenteFit\obj\Debug\GenteFit.pdb
 C:\Users\Ferran\source\repos\NET.Workers\GenteFit\bin\Debug\GenteFit.exe.config
 C:\Users\Ferran\source\repos\NET.Workers\GenteFit\bin\Debug\GenteFit.exe
 C:\Users\Ferran\source\repos\NET.Workers\GenteFit\bin\Debug\GenteFit.pdb
-C:\Users\Ferran\source\repos\NET.Workers\GenteFit\bin\Debug\ClosedXML.dll
 C:\Users\Ferran\source\repos\NET.Workers\GenteFit\bin\Debug\ClosedXML.Parser.dll
 C:\Users\Ferran\source\repos\NET.Workers\GenteFit\bin\Debug\DocumentFormat.OpenXml.dll
 C:\Users\Ferran\source\repos\NET.Workers\GenteFit\bin\Debug\DocumentFormat.OpenXml.Framework.dll
