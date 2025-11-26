@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|c:\\users\\ferran\\source\\repos\\fveigara\\net.workers\\gentefit\\utils\\excelimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\utils\\excelimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|c:\\users\\ferran\\source\\repos\\fveigara\\net.workers\\gentefit\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,20 +90,19 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ExcelImporter.cs",
-              "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Utils\\ExcelImporter.cs",
-              "RelativeDocumentMoniker": "GenteFit\\Utils\\ExcelImporter.cs",
-              "ToolTip": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Utils\\ExcelImporter.cs*",
-              "RelativeToolTip": "GenteFit\\Utils\\ExcelImporter.cs*",
-              "ViewState": "AgIAAAIAAAAAAAAAAADwvw0AAAA/AAAAAAAAAA==",
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Views\\Form1.cs",
+              "RelativeDocumentMoniker": "GenteFit\\Views\\Form1.cs",
+              "ToolTip": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Views\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GenteFit\\Views\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T22:28:57.678Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T22:41:19.298Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
