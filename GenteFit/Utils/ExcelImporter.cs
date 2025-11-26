@@ -14,13 +14,18 @@ namespace GenteFit.Utils
         public static List<Socio> ImportSocios(string filePath)
         {
             var lista = new List<Socio>();
-            string baseDir = AppDomain.CurrentDomain.BaseDirectory;
-            string fullPath = Path.GetFullPath(Path.Combine(baseDir, filePath));
+            string[] candidates = {
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Excel", "socios.xlsx"),
+                Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\Excel\\socios.xlsx"))
+            };
+            string found = candidates.FirstOrDefault(File.Exists);
+            if (found == null)
+            {
+                // registrar y/o pedir al usuario seleccionar el fichero
+                throw new FileNotFoundException($"No se encontró el fichero Excel. Buscados: {string.Join(", ", candidates)}");
+            }
 
-            if (!File.Exists(fullPath))
-                throw new FileNotFoundException($"No se encontró el fichero Excel: {fullPath}");
-
-            using (var wb = new XLWorkbook(fullPath))
+            using (var wb = new XLWorkbook(found))
             {
                 var ws = wb.Worksheet(1);
                 if (ws == null || ws.IsEmpty())

@@ -1,30 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Ferran\\source\\repos\\NET.Workers\\",
+  "WorkspaceRootPath": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|C:\\Users\\Ferran\\source\\repos\\NET.Workers\\gentefit\\utils\\excelimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|c:\\users\\ferran\\source\\repos\\fveigara\\net.workers\\gentefit\\utils\\excelimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\utils\\excelimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|c:\\users\\ferran\\source\\repos\\net.workers\\gentefit\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|C:\\Users\\Ferran\\source\\repos\\NET.Workers\\gentefit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|C:\\Users\\Ferran\\source\\repos\\NET.Workers\\gentefit\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|C:\\Users\\Ferran\\source\\repos\\NET.Workers\\gentefit\\views\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\views\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|C:\\Users\\Ferran\\source\\repos\\NET.Workers\\gentefit\\utils\\excelexporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\utils\\excelexporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 20,
+          "SelectedChildIndex": 19,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,10 +70,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:139:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
@@ -109,78 +85,25 @@
               "Name": "ST:142:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\NET.Workers\\GenteFit\\Program.cs",
-              "RelativeDocumentMoniker": "GenteFit\\Program.cs",
-              "ToolTip": "C:\\Users\\Ferran\\source\\repos\\NET.Workers\\GenteFit\\Program.cs",
-              "RelativeToolTip": "GenteFit\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T00:39:23.978Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\NET.Workers\\GenteFit\\Views\\Form1.cs",
-              "RelativeDocumentMoniker": "GenteFit\\Views\\Form1.cs",
-              "ToolTip": "C:\\Users\\Ferran\\source\\repos\\NET.Workers\\GenteFit\\Views\\Form1.cs [Dise\u00F1o]",
-              "RelativeToolTip": "GenteFit\\Views\\Form1.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T22:35:01.069Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ExcelImporter.cs",
-              "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\NET.Workers\\GenteFit\\Utils\\ExcelImporter.cs",
+              "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Utils\\ExcelImporter.cs",
               "RelativeDocumentMoniker": "GenteFit\\Utils\\ExcelImporter.cs",
-              "ToolTip": "C:\\Users\\Ferran\\source\\repos\\NET.Workers\\GenteFit\\Utils\\ExcelImporter.cs*",
+              "ToolTip": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Utils\\ExcelImporter.cs*",
               "RelativeToolTip": "GenteFit\\Utils\\ExcelImporter.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAADwvw0AAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T22:06:22.969Z",
+              "WhenOpened": "2025-11-26T22:28:57.678Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\NET.Workers\\GenteFit\\Views\\Form1.cs",
-              "RelativeDocumentMoniker": "GenteFit\\Views\\Form1.cs",
-              "ToolTip": "C:\\Users\\Ferran\\source\\repos\\NET.Workers\\GenteFit\\Views\\Form1.cs",
-              "RelativeToolTip": "GenteFit\\Views\\Form1.cs",
-              "ViewState": "AgIAADUBAAAAAAAAAAAAAFcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T21:19:43.447Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\NET.Workers\\GenteFit\\Views\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "GenteFit\\Views\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\Ferran\\source\\repos\\NET.Workers\\GenteFit\\Views\\Form1.Designer.cs",
-              "RelativeToolTip": "GenteFit\\Views\\Form1.Designer.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAF8BAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T22:00:07.408Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ExcelExporter.cs",
-              "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\NET.Workers\\GenteFit\\Utils\\ExcelExporter.cs",
-              "RelativeDocumentMoniker": "GenteFit\\Utils\\ExcelExporter.cs",
-              "ToolTip": "C:\\Users\\Ferran\\source\\repos\\NET.Workers\\GenteFit\\Utils\\ExcelExporter.cs",
-              "RelativeToolTip": "GenteFit\\Utils\\ExcelExporter.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowFkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T21:28:02.341Z"
             }
           ]
         }
