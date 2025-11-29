@@ -27,8 +27,8 @@ namespace GenteFit
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnBaja = new System.Windows.Forms.Button();
             this.btnRefrescar = new System.Windows.Forms.Button();
-            this.btnImportar = new System.Windows.Forms.Button();
-            this.btnExportar = new System.Windows.Forms.Button();
+            this.btnImportarExcelSocios = new System.Windows.Forms.Button();
+            this.btnExportarExcelSocios = new System.Windows.Forms.Button();
             this.lblBuscarSocio = new System.Windows.Forms.Label();
             this.txtBuscarSocio = new System.Windows.Forms.TextBox();
             this.lblTotalSocios = new System.Windows.Forms.Label();
@@ -43,8 +43,8 @@ namespace GenteFit
             this.btnModificarProducto = new System.Windows.Forms.Button();
             this.btnBajaProducto = new System.Windows.Forms.Button();
             this.btnRefrescarProducto = new System.Windows.Forms.Button();
-            this.btnImportarProducto = new System.Windows.Forms.Button();
-            this.btnExportarProducto = new System.Windows.Forms.Button();
+            this.btnImportarExcelProductos = new System.Windows.Forms.Button();
+            this.btnExportarExcelProductos = new System.Windows.Forms.Button();
             this.lblBuscarProducto = new System.Windows.Forms.Label();
             this.txtBuscarProducto = new System.Windows.Forms.TextBox();
             this.lblTotalProductos = new System.Windows.Forms.Label();
@@ -77,8 +77,8 @@ namespace GenteFit
             this.tabSocios.Controls.Add(this.btnModificar);
             this.tabSocios.Controls.Add(this.btnBaja);
             this.tabSocios.Controls.Add(this.btnRefrescar);
-            this.tabSocios.Controls.Add(this.btnImportar);
-            this.tabSocios.Controls.Add(this.btnExportar);
+            this.tabSocios.Controls.Add(this.btnImportarExcelSocios);
+            this.tabSocios.Controls.Add(this.btnExportarExcelSocios);
             this.tabSocios.Controls.Add(this.lblBuscarSocio);
             this.tabSocios.Controls.Add(this.txtBuscarSocio);
             this.tabSocios.Controls.Add(this.lblTotalSocios);
@@ -178,25 +178,25 @@ namespace GenteFit
             this.btnRefrescar.UseVisualStyleBackColor = true;
             this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
-            // btnImportar
+            // btnImportarExcelSocios
             // 
-            this.btnImportar.Location = new System.Drawing.Point(336, 255);
-            this.btnImportar.Name = "btnImportar";
-            this.btnImportar.Size = new System.Drawing.Size(75, 23);
-            this.btnImportar.TabIndex = 9;
-            this.btnImportar.Text = "Importar";
-            this.btnImportar.UseVisualStyleBackColor = true;
-            this.btnImportar.Click += new System.EventHandler(this.btnImportarExcelSocios_Click);
+            this.btnImportarExcelSocios.Location = new System.Drawing.Point(336, 255);
+            this.btnImportarExcelSocios.Name = "btnImportarExcelSocios";
+            this.btnImportarExcelSocios.Size = new System.Drawing.Size(75, 23);
+            this.btnImportarExcelSocios.TabIndex = 9;
+            this.btnImportarExcelSocios.Text = "Importar";
+            this.btnImportarExcelSocios.UseVisualStyleBackColor = true;
+            this.btnImportarExcelSocios.Click += new System.EventHandler(this.btnImportarExcelSocios_Click);
             // 
-            // btnExportar
+            // btnExportarExcelSocios
             // 
-            this.btnExportar.Location = new System.Drawing.Point(417, 256);
-            this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(75, 23);
-            this.btnExportar.TabIndex = 10;
-            this.btnExportar.Text = "Exportar";
-            this.btnExportar.UseVisualStyleBackColor = true;
-            this.btnExportar.Click += new System.EventHandler(this.btnExportarExcelProductos_Click);
+            this.btnExportarExcelSocios.Location = new System.Drawing.Point(417, 256);
+            this.btnExportarExcelSocios.Name = "btnExportarExcelSocios";
+            this.btnExportarExcelSocios.Size = new System.Drawing.Size(75, 23);
+            this.btnExportarExcelSocios.TabIndex = 10;
+            this.btnExportarExcelSocios.Text = "Exportar";
+            this.btnExportarExcelSocios.UseVisualStyleBackColor = true;
+            this.btnExportarExcelSocios.Click += new System.EventHandler(this.btnExportarExcelSocios_Click);
             // 
             // lblBuscarSocio
             // 
@@ -242,8 +242,8 @@ namespace GenteFit
             this.tabProductos.Controls.Add(this.btnModificarProducto);
             this.tabProductos.Controls.Add(this.btnBajaProducto);
             this.tabProductos.Controls.Add(this.btnRefrescarProducto);
-            this.tabProductos.Controls.Add(this.btnImportarProducto);
-            this.tabProductos.Controls.Add(this.btnExportarProducto);
+            this.tabProductos.Controls.Add(this.btnImportarExcelProductos);
+            this.tabProductos.Controls.Add(this.btnExportarExcelProductos);
             this.tabProductos.Controls.Add(this.lblBuscarProducto);
             this.tabProductos.Controls.Add(this.txtBuscarProducto);
             this.tabProductos.Controls.Add(this.lblTotalProductos);
@@ -334,22 +334,25 @@ namespace GenteFit
             this.btnRefrescarProducto.Text = "Refrescar";
             this.btnRefrescarProducto.Click += new System.EventHandler(this.btnRefrescarProducto_Click);
             // 
-            // btnImportarProducto
+            // btnImportarExcelProductos
             // 
-            this.btnImportarProducto.Location = new System.Drawing.Point(336, 255);
-            this.btnImportarProducto.Name = "btnImportarProducto";
-            this.btnImportarProducto.Size = new System.Drawing.Size(75, 23);
-            this.btnImportarProducto.TabIndex = 9;
-            this.btnImportarProducto.Text = "Importar";
-            this.btnImportarProducto.UseVisualStyleBackColor = true;
+            this.btnImportarExcelProductos.Location = new System.Drawing.Point(336, 255);
+            this.btnImportarExcelProductos.Name = "btnImportarExcelProductos";
+            this.btnImportarExcelProductos.Size = new System.Drawing.Size(75, 23);
+            this.btnImportarExcelProductos.TabIndex = 9;
+            this.btnImportarExcelProductos.Text = "Importar";
+            this.btnImportarExcelProductos.UseVisualStyleBackColor = true;
+            this.btnImportarExcelProductos.Click += new System.EventHandler(this.btnImportarExcelProductos_Click);
             // 
-            // btnExportarProducto
+            // btnExportarExcelProductos
             // 
-            this.btnExportarProducto.Location = new System.Drawing.Point(417, 255);
-            this.btnExportarProducto.Name = "btnExportarProducto";
-            this.btnExportarProducto.Size = new System.Drawing.Size(75, 23);
-            this.btnExportarProducto.TabIndex = 10;
-            this.btnExportarProducto.Text = "Exportar";
+            this.btnExportarExcelProductos.Location = new System.Drawing.Point(417, 255);
+            this.btnExportarExcelProductos.Name = "btnExportarExcelProductos";
+            this.btnExportarExcelProductos.Size = new System.Drawing.Size(75, 23);
+            this.btnExportarExcelProductos.TabIndex = 10;
+            this.btnExportarExcelProductos.Text = "Exportar";
+            this.btnExportarExcelProductos.UseVisualStyleBackColor = true;
+            this.btnExportarExcelProductos.Click += new System.EventHandler(this.btnExportarExcelProductos_Click);
             // 
             // lblBuscarProducto
             // 
@@ -411,8 +414,8 @@ namespace GenteFit
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnBaja;
         private System.Windows.Forms.Button btnRefrescar;
-        private System.Windows.Forms.Button btnImportar;
-        private System.Windows.Forms.Button btnExportar;
+        private System.Windows.Forms.Button btnImportarExcelSocios;
+        private System.Windows.Forms.Button btnExportarExcelSocios;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TextBox txtBuscarSocio;
         private System.Windows.Forms.Label lblBuscarSocio;
@@ -429,8 +432,8 @@ namespace GenteFit
         private System.Windows.Forms.Button btnModificarProducto;
         private System.Windows.Forms.Button btnBajaProducto;
         private System.Windows.Forms.Button btnRefrescarProducto;
-        private System.Windows.Forms.Button btnImportarProducto;
-        private System.Windows.Forms.Button btnExportarProducto;
+        private System.Windows.Forms.Button btnImportarExcelProductos;
+        private System.Windows.Forms.Button btnExportarExcelProductos;
         private System.Windows.Forms.TextBox txtBuscarProducto;
         private System.Windows.Forms.Label lblBuscarProducto;
         private System.Windows.Forms.Label lblTotalProductos;
