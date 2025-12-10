@@ -2,6 +2,7 @@
 using GenteFit.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -11,39 +12,45 @@ namespace GenteFit.Utils
 {
     public static class ExcelExporter
     {
-        public static void ExportSocios(string filePath, List<Socio> socios)
+        public static void ExportClientes(string filePath, List<Cliente> clientes)
         {
             EnsureDirectoryExists(filePath);
 
             using (var wb = new XLWorkbook())
             {
-                var ws = wb.Worksheets.Add("Socios");
+                var ws = wb.Worksheets.Add("Clientes");
 
                 // Cabecera
                 ws.Cell(1, 1).Value = "Id";
                 ws.Cell(1, 2).Value = "Nombre";
-                ws.Cell(1, 3).Value = "Email";
-                ws.Cell(1, 4).Value = "FechaAlta";
-
+                ws.Cell(1, 3).Value = "Apellidos";
+                ws.Cell(1, 4).Value = "Documento";
+                ws.Cell(1, 5).Value = "Email";
+                ws.Cell(1, 6).Value = "Teléfono";
+                ws.Cell(1, 7).Value = "Fecha Alta";
+                
                 // Datos
                 int r = 2;
-                foreach (var s in socios)
+                foreach (var c in clientes)
                 {
-                    ws.Cell(r, 1).Value = s.Id;
-                    ws.Cell(r, 2).Value = s.Nombre;
-                    ws.Cell(r, 3).Value = s.Email;
-                    ws.Cell(r, 4).Value = s.FechaAlta;
-                    ws.Cell(r, 4).Style.NumberFormat.Format = "yyyy-mm-dd hh:mm:ss";
+                    ws.Cell(r, 1).Value = c.Id;
+                    ws.Cell(r, 2).Value = c.Nombre;
+                    ws.Cell(r, 3).Value = c.Apellidos;
+                    ws.Cell(r, 4).Value = c.Documento;
+                    ws.Cell(r, 5).Value = c.Email;
+                    ws.Cell(r, 6).Value = c.Telefono;
+                    ws.Cell(r, 7).Value = c.FechaAlta;
+                    ws.Cell(r, 7).Style.DateFormat.Format = "dd/MM/yyyy";
                     r++;
                 }
 
-                // Formato: negrita cabecera, auto-ajustar columnas, filtro
-                var headerRange = ws.Range(1, 1, 1, 4);
+                // Formato
+                var headerRange = ws.Range(1, 1, 1, 7);
                 headerRange.Style.Font.SetBold();
                 ws.RangeUsed().SetAutoFilter();
                 ws.Columns().AdjustToContents();
-
                 wb.SaveAs(filePath);
+
             }
         }
 
@@ -76,7 +83,6 @@ namespace GenteFit.Utils
                 headerRange.Style.Font.SetBold();
                 ws.RangeUsed().SetAutoFilter();
                 ws.Columns().AdjustToContents();
-
                 wb.SaveAs(filePath);
             }
         }

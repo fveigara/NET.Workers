@@ -11,12 +11,12 @@ namespace GenteFit.Utils
 {
     public static class ExcelImporter
     {
-        public static List<Socio> ImportSocios(string filePath)
+        public static List<Cliente> ImportClientes(string filePath)
         {
-            var lista = new List<Socio>();
+            var lista = new List<Cliente>();
             string[] candidates = {
-                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Excel", "socios.xlsx"),
-                Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\Excel\\socios.xlsx"))
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Excel", "clientes.xlsx"),
+                Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\Excel\\clientes.xlsx"))
             };
             string found = candidates.FirstOrDefault(File.Exists);
             if (found == null)
@@ -38,16 +38,22 @@ namespace GenteFit.Utils
                     if (first) { first = false; continue; } // saltar header si aplica
 
                     var nombre = row.Cell(2).GetString();
-                    var email = row.Cell(3).GetString();
+                    var apellidos = row.Cell(3).GetString();
+                    var documento = row.Cell(4).GetString();
+                    var email = row.Cell(5).GetString();
+                    var telefono = row.Cell(6).GetString();
 
                     DateTime fechaAlta;
-                    if (!row.Cell(4).TryGetValue(out fechaAlta))
+                    if (!row.Cell(7).TryGetValue(out fechaAlta))
                         fechaAlta = DateTime.MinValue; // o nullables según modelo
 
-                    lista.Add(new Socio
+                    lista.Add(new Cliente
                     {
                         Nombre = nombre,
+                        Apellidos = apellidos,
+                        Documento = documento,
                         Email = email,
+                        Telefono = telefono,
                         FechaAlta = fechaAlta
                     });
                 }

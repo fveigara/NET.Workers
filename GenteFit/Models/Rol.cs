@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace GenteFit.Models
 {
-    public class Socio
+    public class Rol
     {
         public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Email { get; set; }
-        public DateTime FechaAlta { get; set; }
-    }
 
+        // Nombre del rol (Administrador, Encargado, Recepcionista, Cliente)
+        public string Nombre { get; set; }
+
+        // Relación N-a-N con usuarios
+        public virtual ICollection<ClienteRol> ClienteRoles { get; set; }
+    }
 }

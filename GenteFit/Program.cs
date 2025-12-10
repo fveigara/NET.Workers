@@ -24,31 +24,31 @@ namespace GenteFit
                 db = new GenteFitContext();
 
                 // ALTA
-                var s1 = new Socio { Nombre = "Nuevo Socio", Email = "nuevo@socio.com", FechaAlta = DateTime.Now };
-                db.Socios.Add(s1);
+                var c1 = new Cliente { Nombre = "Nuevo Cliente", Email = "nuevo@cliente.com", FechaAlta = DateTime.Now };
+                db.Clientes.Add(c1);
                 db.SaveChanges();
-                Console.WriteLine($"Alta Socio Id={s1.Id}");
+                Console.WriteLine($"Alta Cliente Id={c1.Id}");
 
                 // CONSULTA
-                var socios = db.Socios.ToList();
-                Console.WriteLine($"Socios en BD: {socios.Count}");
+                var clientes = db.Clientes.ToList();
+                Console.WriteLine($"Clientes en BD: {clientes.Count}");
 
                 // MODIFICACION
-                var socio = db.Socios.First();
-                socio.Email = "modificado@socio.com";
+                var cliente = db.Clientes.First();
+                cliente.Email = "modificado@cliente.com";
                 db.SaveChanges();
                 Console.WriteLine("Email actualizado");
 
                 // BAJA
-                db.Socios.Remove(socio);
+                db.Clientes.Remove(cliente);
                 db.SaveChanges();
-                Console.WriteLine("Socio eliminado");
+                Console.WriteLine("Cliente eliminado");
 
                 // IMPORTAR Excel
-                Utils.ExcelImporter.ImportSocios("Excel/socios.xlsx");
+                Utils.ExcelImporter.ImportClientes("Excel/clientes.xlsx");
 
                 // EXPORTAR Excel
-                Utils.ExcelExporter.ExportSocios("Excel/socios_exportados.xlsx", socios);
+                Utils.ExcelExporter.ExportClientes("Excel/clientes_exportados.xlsx", clientes);
 
                 Console.WriteLine("Demo completa en .NET 4.8");
             }
