@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GenteFit.Data;
 using GenteFit.Models;
+using System.Data.Entity;
 
 namespace GenteFit.DAO
 {
@@ -117,7 +118,10 @@ namespace GenteFit.DAO
         {
             using (var db = new GenteFitContext())
             {
-                return db.Reservas.Where(r => r.ClienteId == clienteId).ToList();
+                // Incluir Cliente por si la UI consulta r.Cliente.Nombre después del Dispose
+                return db.Reservas.Include(r => r.Cliente)
+                                  .Where(r => r.ClienteId == clienteId)
+                                  .ToList();
             }
         }
 
@@ -125,8 +129,13 @@ namespace GenteFit.DAO
         {
             using (var db = new GenteFitContext())
             {
-                var confirmed = db.Reservas.Where(r => r.SesionId == sesionId && r.Estado == EstadoReserva.Confirmada).ToList();
-                var waiting = db.Reservas.Where(r => r.SesionId == sesionId && r.Estado == EstadoReserva.EnEspera).OrderBy(r => r.PosicionEspera).ToList();
+                var confirmed = db.Reservas.Include(r => r.Cliente)
+                                           .Where(r => r.SesionId == sesionId && r.Estado == EstadoReserva.Confirmada)
+                                           .ToList();
+                var waiting = db.Reservas.Include(r => r.Cliente)
+                                         .Where(r => r.SesionId == sesionId && r.Estado == EstadoReserva.EnEspera)
+                                         .OrderBy(r => r.PosicionEspera)
+                                         .ToList();
                 return (confirmed, waiting);
             }
         }

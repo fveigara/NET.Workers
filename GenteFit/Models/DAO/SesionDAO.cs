@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GenteFit.Data;
-using GenteFit.Models;  
+using GenteFit.Models;
+using System.Data.Entity;  
 
 namespace GenteFit.DAO
 {
@@ -37,13 +38,17 @@ namespace GenteFit.DAO
         public List<Sesion> ListUpcoming()
         {
             using (var db = new GenteFitContext())
-                return db.Sesiones.Where(x => x.FechaHora >= System.DateTime.Now).ToList();
+                // Include Actividad para evitar lazy-loading fuera del contexto
+                return db.Sesiones.Include(s => s.Actividad)
+                                  .Where(x => x.FechaHora >= System.DateTime.Now)
+                                  .ToList();
         }
 
         public Sesion GetById(int id)
         {
             using (var db = new GenteFitContext())
-                return db.Sesiones.Find(id);
+                // Incluir Actividad si la UI la va a necesitar
+                return db.Sesiones.Include(s => s.Actividad).FirstOrDefault(s => s.Id == id);
         }
     }
 }

@@ -7,13 +7,13 @@ namespace GenteFit.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.5.1")]
-    public sealed partial class InicialLimpia : IMigrationMetadata
+    public sealed partial class Inicial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InicialLimpia));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Inicial));
         
         string IMigrationMetadata.Id
         {
-            get { return "202512101733360_InicialLimpia"; }
+            get { return "202512111951200_Inicial"; }
         }
         
         string IMigrationMetadata.Source
