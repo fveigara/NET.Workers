@@ -11,113 +11,166 @@ namespace GenteFit.Data
     {
         public static void Initialize(GenteFitContext db)
         {
-            // Se ejecuta solo si la base está completamente vacía.
-            if (db.Actividades.Any() || db.Clientes.Any() || db.Sesiones.Any() || db.Reservas.Any())
+            // Ejecutar SOLO si la BD está vacía
+            if (db.Clientes.Any() || db.Actividades.Any())
                 return;
 
-            // ================================
-            // 1) ACTIVIDADES (5)
-            // ================================
-            var actividades = new Actividad[]
+            var rnd = new Random();
+
+            // =====================================================
+            // 1) ROLES
+            // =====================================================
+            var rolAdmin = new Rol { Nombre = "Administrador" };
+            var rolCliente = new Rol { Nombre = "Cliente" };
+
+            db.Roles.Add(rolAdmin);
+            db.Roles.Add(rolCliente);
+            db.SaveChanges();
+
+            // =====================================================
+            // 2) ACTIVIDADES (5)
+            // =====================================================
+            var actividades = new[]
             {
-                new Actividad { Nombre = "Yoga",            Descripcion = "Relajación y respiración", Intensidad = Intensidad.Baja },
-                new Actividad { Nombre = "Pilates",         Descripcion = "Control postural",         Intensidad = Intensidad.Media },
-                new Actividad { Nombre = "CrossFit",        Descripcion = "Alta intensidad",          Intensidad = Intensidad.Alta },
-                new Actividad { Nombre = "Spinning",        Descripcion = "Bicicleta indoor",         Intensidad = Intensidad.Alta },
-                new Actividad { Nombre = "Zumba",           Descripcion = "Cardio y baile",           Intensidad = Intensidad.Media },
+                new Actividad { Nombre = "Yoga", Intensidad = Intensidad.Baja,  Descripcion = "Relajación" },
+                new Actividad { Nombre = "Pilates", Intensidad = Intensidad.Media, Descripcion = "Control postural" },
+                new Actividad { Nombre = "CrossFit", Intensidad = Intensidad.Alta, Descripcion = "Alta intensidad" },
+                new Actividad { Nombre = "Spinning", Intensidad = Intensidad.Alta, Descripcion = "Bicicleta indoor" },
+                new Actividad { Nombre = "Zumba", Intensidad = Intensidad.Media, Descripcion = "Cardio y baile" }
             };
 
             db.Actividades.AddRange(actividades);
             db.SaveChanges();
 
-
-            // ================================
-            // 2) SESIONES (10)
-            // ================================
+            // =====================================================
+            // 3) SESIONES (10)
+            // =====================================================
             var actividadIds = db.Actividades.Select(a => a.Id).ToList();
-            var rnd = new Random();
 
             for (int i = 0; i < 10; i++)
             {
-                var actId = actividadIds[rnd.Next(actividadIds.Count)];
-
-                var fecha = DateTime.Now.Date.AddDays(rnd.Next(1, 15))  // entre mañana y 15 días
-                                             .AddHours(rnd.Next(8, 21)); // de 8h a 20h
-
-                var ses = new Sesion
+                db.Sesiones.Add(new Sesion
                 {
-                    ActividadId = actId,
-                    FechaHora = fecha,
+                    ActividadId = actividadIds[rnd.Next(actividadIds.Count)],
+                    FechaHora = DateTime.Now.Date.AddDays(rnd.Next(1, 14)).AddHours(rnd.Next(8, 21)),
                     Sala = "Sala " + rnd.Next(1, 4),
                     Monitor = "Monitor " + (char)('A' + rnd.Next(5)),
-                    AforoMax = rnd.Next(10, 25)
-                };
-
-                db.Sesiones.Add(ses);
+                    AforoMax = 16
+                });
             }
 
             db.SaveChanges();
 
+            // =====================================================
+            // 4) CLIENTES (20)
+            // =====================================================
+            var clientes = new List<Cliente>();
 
-            // ================================
-            // 3) CLIENTES (20)
-            // ================================
-            var clientes = new Cliente[20];
             for (int i = 0; i < 20; i++)
             {
-                clientes[i] = new Cliente
+                clientes.Add(new Cliente
                 {
-                    Nombre = "Cliente" + (i + 1),
+                    Nombre = $"Cliente{i + 1}",
                     Apellidos = "Demo",
                     Documento = $"{10000000 + i}A",
                     Email = $"cliente{i + 1}@demo.com",
-                    Telefono = "600000" + i.ToString().PadLeft(2, '0'),
-                    FechaAlta = DateTime.Now.AddDays(-rnd.Next(0, 365)),
+                    Telefono = "600000" + i.ToString("D2"),
+                    FechaAlta = DateTime.Now.AddDays(-rnd.Next(1, 300)),
                     IsActive = true
-                };
+                });
             }
 
             db.Clientes.AddRange(clientes);
             db.SaveChanges();
 
+            // =====================================================
+            // 5) ASIGNAR ROLES AUTOMÁTICOS
+            // =====================================================
+            foreach (var cliente in db.Clientes)
+            {
+                db.ClienteRoles.Add(new ClienteRol
+                {
+                    ClienteId = cliente.Id,
+                    RolId = rolCliente.Id
+                });
+            }
 
-            // ================================
-            // 4) RESERVAS DEMO (opcionales)
-            // - Añadimos algunas reservas aleatorias sin romper aforo
-            // ================================
+            // Cliente admin
+            var admin = new Cliente
+            {
+                Nombre = "Admin",
+                Apellidos = "GenteFit",
+                Documento = "00000000A",
+                Email = "admin@gentefit.com",
+                Telefono = "600000000",
+                FechaAlta = DateTime.Now,
+                IsActive = true
+            };
+
+            db.Clientes.Add(admin);
+            db.SaveChanges();
+
+            db.ClienteRoles.Add(new ClienteRol
+            {
+                ClienteId = admin.Id,
+                RolId = rolAdmin.Id
+            });
+
+            db.SaveChanges();
+
+            // =====================================================
+            // 6) RESERVAS COHERENTES
+            // =====================================================
             var sesiones = db.Sesiones.ToList();
             var clientesIds = db.Clientes.Select(c => c.Id).ToList();
 
             foreach (var ses in sesiones)
             {
-                int plazasConfirmadas = rnd.Next(0, ses.AforoMax);
-                int plazasEspera = rnd.Next(0, 3);
+                var clientesUsados = new HashSet<int>();
+
+                int confirmadas = rnd.Next(0, ses.AforoMax + 1);
+                int espera = rnd.Next(0, 5);
 
                 // Confirmadas
-                for (int i = 0; i < plazasConfirmadas; i++)
+                for (int i = 0; i < confirmadas; i++)
                 {
-                    int cliId = clientesIds[rnd.Next(clientesIds.Count)];
+                    int clienteId;
+                    do
+                    {
+                        clienteId = clientesIds[rnd.Next(clientesIds.Count)];
+                    }
+                    while (!clientesUsados.Add(clienteId));
+
                     db.Reservas.Add(new Reserva
                     {
                         SesionId = ses.Id,
-                        ClienteId = cliId,
+                        ClienteId = clienteId,
                         Estado = EstadoReserva.Confirmada,
-                        CreatedAt = DateTime.Now.AddMinutes(-rnd.Next(0, 10000))
+                        CreatedAt = DateTime.Now.AddMinutes(-rnd.Next(0, 5000))
                     });
                 }
 
-                // Lista de espera
-                for (int i = 0; i < plazasEspera; i++)
+                // Lista de espera SOLO si está lleno
+                if (confirmadas >= ses.AforoMax)
                 {
-                    int cliId = clientesIds[rnd.Next(clientesIds.Count)];
-                    db.Reservas.Add(new Reserva
+                    for (int i = 0; i < espera; i++)
                     {
-                        SesionId = ses.Id,
-                        ClienteId = cliId,
-                        Estado = EstadoReserva.EnEspera,
-                        PosicionEspera = i + 1,
-                        CreatedAt = DateTime.Now.AddMinutes(-rnd.Next(0, 10000))
-                    });
+                        int clienteId;
+                        do
+                        {
+                            clienteId = clientesIds[rnd.Next(clientesIds.Count)];
+                        }
+                        while (!clientesUsados.Add(clienteId));
+
+                        db.Reservas.Add(new Reserva
+                        {
+                            SesionId = ses.Id,
+                            ClienteId = clienteId,
+                            Estado = EstadoReserva.EnEspera,
+                            PosicionEspera = i + 1,
+                            CreatedAt = DateTime.Now.AddMinutes(-rnd.Next(0, 5000))
+                        });
+                    }
                 }
             }
 

@@ -15,9 +15,9 @@
                         Nombre = c.String(nullable: false),
                         Descripcion = c.String(),
                         Intensidad = c.Int(nullable: false),
-                    })
+                })
                 .PrimaryKey(t => t.Id);
-            
+
             CreateTable(
                 "dbo.Sesions",
                 c => new
@@ -49,22 +49,22 @@
                 .ForeignKey("dbo.Sesions", t => t.SesionId, cascadeDelete: true)
                 .Index(t => t.ClienteId)
                 .Index(t => t.SesionId);
-            
+
             CreateTable(
                 "dbo.Clientes",
                 c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Nombre = c.String(nullable: false),
-                        Apellidos = c.String(),
-                        Documento = c.String(nullable: false, maxLength: 20),
-                        Email = c.String(),
-                        Telefono = c.String(),
-                        IsActive = c.Boolean(nullable: false),
-                        FechaAlta = c.DateTime(nullable: false),
-                    })
+                {
+                    Id = c.Int(nullable: false, identity: true),
+                    Nombre = c.String(nullable: false),
+                    Apellidos = c.String(),
+                    Documento = c.String(nullable: false, maxLength: 20),
+                    Email = c.String(),
+                    Telefono = c.String(),
+                    IsActive = c.Boolean(nullable: false),
+                    FechaAlta = c.DateTime(nullable: false),
+                })
                 .PrimaryKey(t => t.Id);
-            
+
             CreateTable(
                 "dbo.ClienteRols",
                 c => new

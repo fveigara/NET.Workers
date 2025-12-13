@@ -66,6 +66,11 @@ namespace GenteFit
             // =========================
             // Tab: Clientes (left grid + right panel)
             // =========================
+            this.dgvClientes.AutoGenerateColumns = true;
+            this.dgvClientes.AllowUserToAddRows = false;
+            this.dgvClientes.AllowUserToDeleteRows = false;
+            this.dgvClientes.RowHeadersVisible = false;
+            this.dgvClientes.ReadOnly = true;
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.pnlClientes = new System.Windows.Forms.Panel();
 
@@ -238,6 +243,11 @@ namespace GenteFit
             // Tab: Productos
             // similar layout: left grid, right panel with product fields
             // =========================
+            this.dgvProductos.AutoGenerateColumns = true;
+            this.dgvProductos.AllowUserToAddRows = false;
+            this.dgvProductos.AllowUserToDeleteRows = false;
+            this.dgvProductos.RowHeadersVisible = false;
+            this.dgvProductos.ReadOnly = true;
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.pnlProductos = new System.Windows.Forms.Panel();
 
@@ -365,6 +375,11 @@ namespace GenteFit
             // =========================
             // Tab: Actividades (left grid, right panel)
             // =========================
+            this.dgvActividades.AutoGenerateColumns = true;
+            this.dgvActividades.AllowUserToAddRows = false;
+            this.dgvActividades.AllowUserToDeleteRows = false;
+            this.dgvActividades.RowHeadersVisible = false;
+            this.dgvActividades.ReadOnly = true;
             this.dgvActividades = new System.Windows.Forms.DataGridView();
             this.pnlActividades = new System.Windows.Forms.Panel();
 
@@ -462,6 +477,11 @@ namespace GenteFit
             // =========================
             // Tab: Sesiones
             // =========================
+            this.dgvSesiones.AutoGenerateColumns = true;
+            this.dgvSesiones.AllowUserToAddRows = false;
+            this.dgvSesiones.AllowUserToDeleteRows = false;
+            this.dgvSesiones.RowHeadersVisible = false;
+            this.dgvSesiones.ReadOnly = true;
             this.dgvSesiones = new System.Windows.Forms.DataGridView();
             this.pnlSesiones = new System.Windows.Forms.Panel();
 
@@ -599,8 +619,23 @@ namespace GenteFit
             // Tab: Reservas
             // Left top: sesiones grid, left bottom: confirmed/waiting; Right: reservation actions
             // =========================
+            this.dgvReservasSesiones.AutoGenerateColumns = true;
+            this.dgvReservasSesiones.AllowUserToAddRows = false;
+            this.dgvReservasSesiones.AllowUserToDeleteRows = false;
+            this.dgvReservasSesiones.RowHeadersVisible = false;
+            this.dgvReservasSesiones.ReadOnly = true;
             this.dgvReservasSesiones = new System.Windows.Forms.DataGridView();
+            this.dgvReservasConfirmed.AutoGenerateColumns = true;
+            this.dgvReservasConfirmed.AllowUserToAddRows = false;
+            this.dgvReservasConfirmed.AllowUserToDeleteRows = false;
+            this.dgvReservasConfirmed.RowHeadersVisible = false;
+            this.dgvReservasConfirmed.ReadOnly = true;
             this.dgvReservasConfirmed = new System.Windows.Forms.DataGridView();
+            this.dgvReservasWaiting.AutoGenerateColumns = true;
+            this.dgvReservasWaiting.AllowUserToAddRows = false;
+            this.dgvReservasWaiting.AllowUserToDeleteRows = false;
+            this.dgvReservasWaiting.RowHeadersVisible = false;
+            this.dgvReservasWaiting.ReadOnly = true;
             this.dgvReservasWaiting = new System.Windows.Forms.DataGridView();
             this.pnlReservas = new System.Windows.Forms.Panel();
 
@@ -616,12 +651,16 @@ namespace GenteFit
             this.dgvReservasConfirmed.Location = new System.Drawing.Point(8, 220);
             this.dgvReservasConfirmed.Size = new System.Drawing.Size(310, 220);
             this.dgvReservasConfirmed.ReadOnly = true;
+            this.dgvReservasConfirmed.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.dgvReservasConfirmed.MultiSelect = false;
             this.dgvReservasConfirmed.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvReservasConfirmed.Name = "dgvReservasConfirmed";
 
             this.dgvReservasWaiting.Location = new System.Drawing.Point(338, 220);
             this.dgvReservasWaiting.Size = new System.Drawing.Size(310, 220);
             this.dgvReservasWaiting.ReadOnly = true;
+            this.dgvReservasWaiting.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.dgvReservasWaiting.MultiSelect = false;
             this.dgvReservasWaiting.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvReservasWaiting.Name = "dgvReservasWaiting";
 

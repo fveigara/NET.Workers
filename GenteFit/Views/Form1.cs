@@ -26,10 +26,35 @@ namespace GenteFit
         public Form1()
         {
             InitializeComponent();
+
+            dgvClientes.DataError += Grid_DataError;
+            dgvProductos.DataError += Grid_DataError;
+            dgvActividades.DataError += Grid_DataError;
+            dgvSesiones.DataError += Grid_DataError;
+            dgvReservasSesiones.DataError += Grid_DataError;
+            dgvReservasConfirmed.DataError += Grid_DataError;
+            dgvReservasWaiting.DataError += Grid_DataError;
+        }
+
+        private void Grid_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            MessageBox.Show(
+                e.Exception?.Message ?? "Error en DataGridView",
+                "Error de datos",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error
+            );
+            e.ThrowException = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            cmbActividadSesion.DisplayMember = "Nombre";
+            cmbActividadSesion.ValueMember = "Id";
+
+            cmbReservasCliente.DisplayMember = "Nombre";
+            cmbReservasCliente.ValueMember = "Id";
+
             // cargar inicial
             CargarClientes();
             CargarProductos();
@@ -52,8 +77,21 @@ namespace GenteFit
         // ----------------------------
         private void CargarClientes()
         {
-            var lista = clientesController.Buscar(""); // todos activos
-            dgvClientes.DataSource = lista;
+            var lista = clientesController.Buscar("");
+
+            dgvClientes.AutoGenerateColumns = true;
+            dgvClientes.DataSource = lista.Select(c => new
+            {
+                c.Id,
+                c.Nombre,
+                c.Apellidos,
+                c.Documento,
+                c.Email,
+                c.Telefono,
+                c.FechaAlta,
+                Activo = c.IsActive
+            }).ToList();
+
             lblTotalClientsLabel.Text = $"Total clientes: {lista.Count}";
             RefreshClientesCombo();
         }
@@ -220,7 +258,15 @@ namespace GenteFit
         private void CargarProductos()
         {
             var lista = productosController.Listar();
-            dgvProductos.DataSource = lista;
+
+            dgvProductos.AutoGenerateColumns = true;
+            dgvProductos.DataSource = lista.Select(p => new
+            {
+                p.Id,
+                p.Nombre,
+                p.Precio
+            }).ToList();
+
             lblTotalProductsLabel.Text = $"Total productos: {lista.Count}";
         }
 
@@ -340,8 +386,16 @@ namespace GenteFit
         private void CargarActividades()
         {
             var list = actividadesController.Listar();
-            dgvActividades.DataSource = list;
-            // fill intensity combo is done in designer
+
+            dgvActividades.AutoGenerateColumns = true;
+            dgvActividades.DataSource = list.Select(a => new
+            {
+                a.Id,
+                a.Nombre,
+                a.Descripcion,
+                Intensidad = a.Intensidad.ToString()
+            }).ToList();
+
             RefreshActivitiesInSesions();
         }
 
@@ -403,15 +457,18 @@ namespace GenteFit
         private void CargarSesiones()
         {
             var list = sesionesController.ListarProximas();
+
+            dgvSesiones.AutoGenerateColumns = true;
             dgvSesiones.DataSource = list.Select(s => new
             {
                 s.Id,
-                Actividad = s.Actividad?.Nombre ?? actividadesController.Listar().FirstOrDefault(a => a.Id == s.ActividadId)?.Nombre,
-                FechaHora = s.FechaHora,
+                Actividad = s.Actividad?.Nombre,
+                s.FechaHora,
                 s.Sala,
                 s.Monitor,
                 s.AforoMax
             }).ToList();
+
             RefreshSessionsReservationViews();
         }
 
