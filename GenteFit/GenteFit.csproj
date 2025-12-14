@@ -116,8 +116,8 @@
     <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\Sesion.cs" />
     <Compile Include="Models\Usuario.cs" />
-    <Compile Include="Utils\ExcelExporter.cs" />
-    <Compile Include="Utils\ExcelImporter.cs" />
+    <Compile Include="Utils\XmlExporter.cs" />
+    <Compile Include="Utils\XmlImporter.cs" />
     <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

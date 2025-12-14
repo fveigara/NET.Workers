@@ -11,7 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static ClosedXML.Excel.XLPredefinedFormat;
 
 namespace GenteFit
 {
@@ -188,22 +187,33 @@ namespace GenteFit
         {
             using (OpenFileDialog ofd = new OpenFileDialog())
             {
-                ofd.Filter = "Excel (*.xlsx)|*.xlsx";
+                ofd.Filter = "XML (*.xml)|*.xml";
+                ofd.Title = "Importar clientes desde XML";
+
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     try
                     {
-                        var lista = ExcelImporter.ImportClientes(ofd.FileName); // reusa importer
-                        foreach (var c in lista)
-                        {
-                            clientesController.Registrar(c.Nombre, c.Apellidos ?? "", c.Documento ?? "", c.Email ?? "", "");
-                        }
+                        // Importa directamente a BD (sin duplicados)
+                        Utils.XmlImporter.ImportClientes(ofd.FileName);
+
                         CargarClientes();
-                        MessageBox.Show($"Importados {lista.Count} clientes.", "Importación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        MessageBox.Show(
+                            "Clientes importados correctamente.",
+                            "Importación XML",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information
+                        );
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Error importando: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(
+                            $"Error importando XML:\n{ex.Message}",
+                            "Error",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error
+                        );
                     }
                 }
             }
@@ -212,25 +222,46 @@ namespace GenteFit
         private void btnExportarExcelClientes_Click(object sender, EventArgs e)
         {
             var lista = clientesController.Buscar("");
+
             if (lista.Count == 0)
             {
-                MessageBox.Show("No hay clientes para exportar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(
+                    "No hay clientes para exportar.",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
                 return;
             }
 
             using (SaveFileDialog sfd = new SaveFileDialog())
             {
-                sfd.Filter = "Excel (*.xlsx)|*.xlsx";
-                sfd.FileName = "clientes.xlsx";
+                sfd.Filter = "XML (*.xml)|*.xml";
+                sfd.FileName = "clientes.xml";
+                sfd.Title = "Exportar clientes a XML";
+
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
-                    ExcelExporter.ExportClientes(sfd.FileName, lista.Select(c => new GenteFit.Models.Cliente
+                    // Convertimos DTO → Modelo limpio
+                    var clientes = lista.Select(c => new GenteFit.Models.Cliente
                     {
-                        Nombre = c.Nombre + " " + (c.Apellidos ?? ""),
+                        Nombre = c.Nombre,
+                        Apellidos = c.Apellidos,
+                        Documento = c.Documento,
                         Email = c.Email,
-                        FechaAlta = System.DateTime.UtcNow
-                    }).ToList());
-                    MessageBox.Show("Clientes exportados.", "Exportar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Telefono = c.Telefono,
+                        FechaAlta = c.FechaAlta,
+                        IsActive = true
+                    }).ToList();
+
+                    Utils.XmlExporter.ExportClientes(sfd.FileName, clientes);
+
+                    MessageBox.Show(
+                        "Clientes exportados correctamente.",
+                        "Exportación XML",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
                 }
             }
         }
@@ -312,19 +343,33 @@ namespace GenteFit
         {
             using (OpenFileDialog ofd = new OpenFileDialog())
             {
-                ofd.Filter = "Excel (*.xlsx)|*.xlsx";
+                ofd.Filter = "XML (*.xml)|*.xml";
+                ofd.Title = "Importar productos desde XML";
+
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     try
                     {
-                        var lista = ExcelImporter.ImportProductos(ofd.FileName);
-                        foreach (var p in lista) productosController.Alta(p.Nombre, p.Precio);
+                        // Importación directa a BD (controla duplicados internamente)
+                        Utils.XmlImporter.ImportProductos(ofd.FileName);
+
                         CargarProductos();
-                        MessageBox.Show($"Importados {lista.Count} productos.", "Importación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        MessageBox.Show(
+                            "Productos importados correctamente.",
+                            "Importación XML",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information
+                        );
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Error importando: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(
+                            $"Error importando XML:\n{ex.Message}",
+                            "Error",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error
+                        );
                     }
                 }
             }
@@ -333,15 +378,40 @@ namespace GenteFit
         private void btnExportarExcelProductos_Click(object sender, EventArgs e)
         {
             var lista = productosController.Listar();
-            if (lista.Count == 0) { MessageBox.Show("No hay productos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information); return; }
+
+            if (lista.Count == 0)
+            {
+                MessageBox.Show(
+                    "No hay productos para exportar.",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+                return;
+            }
+
             using (SaveFileDialog sfd = new SaveFileDialog())
             {
-                sfd.Filter = "Excel (*.xlsx)|*.xlsx";
-                sfd.FileName = "productos.xlsx";
+                sfd.Filter = "XML (*.xml)|*.xml";
+                sfd.FileName = "productos.xml";
+                sfd.Title = "Exportar productos a XML";
+
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
-                    ExcelExporter.ExportProductos(sfd.FileName, lista);
-                    MessageBox.Show("Exportado productos.", "Exportar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    var productos = lista.Select(p => new GenteFit.Models.Producto
+                    {
+                        Nombre = p.Nombre,
+                        Precio = p.Precio
+                    }).ToList();
+
+                    Utils.XmlExporter.ExportProductos(sfd.FileName, productos);
+
+                    MessageBox.Show(
+                        "Productos exportados correctamente.",
+                        "Exportación XML",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
                 }
             }
         }
