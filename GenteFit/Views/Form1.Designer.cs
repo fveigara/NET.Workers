@@ -115,8 +115,8 @@ namespace GenteFit
             this.btnModificarCliente = new System.Windows.Forms.Button();
             this.btnBajaCliente = new System.Windows.Forms.Button();
             this.btnLimpiarCliente = new System.Windows.Forms.Button();
-            this.btnImportarExcelClientes = new System.Windows.Forms.Button();
-            this.btnExportarExcelClientes = new System.Windows.Forms.Button();
+            //this.btnImportarExcelClientes = new System.Windows.Forms.Button();
+            //this.btnExportarExcelClientes = new System.Windows.Forms.Button();
 
             // positions
             this.lblBuscarCliente.Text = "Buscar:";
@@ -193,18 +193,18 @@ namespace GenteFit
             this.btnLimpiarCliente.Click += new System.EventHandler(this.btnLimpiarCliente_Click);
             this.btnLimpiarCliente.Name = "btnLimpiarCliente";
 
-            y += gap + 6;
-            this.btnImportarExcelClientes.Text = "Importar Excel";
-            this.btnImportarExcelClientes.Location = new System.Drawing.Point(8, y);
-            this.btnImportarExcelClientes.Size = new System.Drawing.Size(140, 26);
-            this.btnImportarExcelClientes.Click += new System.EventHandler(this.btnImportarExcelClientes_Click);
-            this.btnImportarExcelClientes.Name = "btnImportarExcelClientes";
+            //y += gap + 6;
+            //this.btnImportarExcelClientes.Text = "Importar";
+            //this.btnImportarExcelClientes.Location = new System.Drawing.Point(8, y);
+            //this.btnImportarExcelClientes.Size = new System.Drawing.Size(140, 26);
+            //this.btnImportarExcelClientes.Click += new System.EventHandler(this.btnImportarExcelClientes_Click);
+            //this.btnImportarExcelClientes.Name = "btnImportarExcelClientes";
 
-            this.btnExportarExcelClientes.Text = "Exportar Excel";
-            this.btnExportarExcelClientes.Location = new System.Drawing.Point(154, y);
-            this.btnExportarExcelClientes.Size = new System.Drawing.Size(154, 26);
-            this.btnExportarExcelClientes.Click += new System.EventHandler(this.btnExportarExcelClientes_Click);
-            this.btnExportarExcelClientes.Name = "btnExportarExcelClientes";
+            //this.btnExportarExcelClientes.Text = "Exportar";
+            //this.btnExportarExcelClientes.Location = new System.Drawing.Point(154, y);
+            //this.btnExportarExcelClientes.Size = new System.Drawing.Size(154, 26);
+            //this.btnExportarExcelClientes.Click += new System.EventHandler(this.btnExportarExcelClientes_Click);
+            //this.btnExportarExcelClientes.Name = "btnExportarExcelClientes";
 
             y += gap + 10;
             this.lblTotalClientsLabel = new System.Windows.Forms.Label();
@@ -230,8 +230,8 @@ namespace GenteFit
             this.pnlClientes.Controls.Add(this.btnModificarCliente);
             this.pnlClientes.Controls.Add(this.btnBajaCliente);
             this.pnlClientes.Controls.Add(this.btnLimpiarCliente);
-            this.pnlClientes.Controls.Add(this.btnImportarExcelClientes);
-            this.pnlClientes.Controls.Add(this.btnExportarExcelClientes);
+            //this.pnlClientes.Controls.Add(this.btnImportarExcelClientes);
+            //this.pnlClientes.Controls.Add(this.btnExportarExcelClientes);
             this.pnlClientes.Controls.Add(this.lblTotalClientsLabel);
 
             // add to tab
@@ -280,8 +280,8 @@ namespace GenteFit
             this.btnModificarProducto = new System.Windows.Forms.Button();
             this.btnBajaProducto = new System.Windows.Forms.Button();
             this.btnLimpiarProducto = new System.Windows.Forms.Button();
-            this.btnExportarExcelProductos = new System.Windows.Forms.Button();
-            this.btnImportarExcelProductos = new System.Windows.Forms.Button();
+            //this.btnExportarExcelProductos = new System.Windows.Forms.Button();
+            //this.btnImportarExcelProductos = new System.Windows.Forms.Button();
 
             // positions
             this.lblBuscarProducto.Text = "Buscar:";
@@ -333,18 +333,18 @@ namespace GenteFit
             this.btnLimpiarProducto.Click += new System.EventHandler(this.btnLimpiarProducto_Click);
             this.btnLimpiarProducto.Name = "btnLimpiarProducto";
 
-            py += gap + 6;
-            this.btnImportarExcelProductos.Text = "Importar Excel";
-            this.btnImportarExcelProductos.Location = new System.Drawing.Point(8, py);
-            this.btnImportarExcelProductos.Size = new System.Drawing.Size(140, 26);
-            this.btnImportarExcelProductos.Click += new System.EventHandler(this.btnImportarExcelProductos_Click);
-            this.btnImportarExcelProductos.Name = "btnImportarExcelProductos";
+            //py += gap + 6;
+            //this.btnImportarExcelProductos.Text = "Importar";
+            //this.btnImportarExcelProductos.Location = new System.Drawing.Point(8, py);
+            //this.btnImportarExcelProductos.Size = new System.Drawing.Size(140, 26);
+            //this.btnImportarExcelProductos.Click += new System.EventHandler(this.btnImportarExcelProductos_Click);
+            //this.btnImportarExcelProductos.Name = "btnImportarExcelProductos";
 
-            this.btnExportarExcelProductos.Text = "Exportar Excel";
-            this.btnExportarExcelProductos.Location = new System.Drawing.Point(154, py);
-            this.btnExportarExcelProductos.Size = new System.Drawing.Size(154, 26);
-            this.btnExportarExcelProductos.Click += new System.EventHandler(this.btnExportarExcelProductos_Click);
-            this.btnExportarExcelProductos.Name = "btnExportarExcelProductos";
+            //this.btnExportarExcelProductos.Text = "Exportar";
+            //this.btnExportarExcelProductos.Location = new System.Drawing.Point(154, py);
+            //this.btnExportarExcelProductos.Size = new System.Drawing.Size(154, 26);
+            //this.btnExportarExcelProductos.Click += new System.EventHandler(this.btnExportarExcelProductos_Click);
+            //this.btnExportarExcelProductos.Name = "btnExportarExcelProductos";
 
             py += gap + 6;
             this.lblTotalProductsLabel = new System.Windows.Forms.Label();
@@ -364,8 +364,8 @@ namespace GenteFit
             this.pnlProductos.Controls.Add(this.btnModificarProducto);
             this.pnlProductos.Controls.Add(this.btnBajaProducto);
             this.pnlProductos.Controls.Add(this.btnLimpiarProducto);
-            this.pnlProductos.Controls.Add(this.btnImportarExcelProductos);
-            this.pnlProductos.Controls.Add(this.btnExportarExcelProductos);
+            //this.pnlProductos.Controls.Add(this.btnImportarExcelProductos);
+            //this.pnlProductos.Controls.Add(this.btnExportarExcelProductos);
             this.pnlProductos.Controls.Add(this.lblTotalProductsLabel);
 
             this.tabProductos.Controls.Add(this.dgvProductos);
@@ -769,8 +769,8 @@ namespace GenteFit
         private System.Windows.Forms.Button btnModificarCliente;
         private System.Windows.Forms.Button btnBajaCliente;
         private System.Windows.Forms.Button btnLimpiarCliente;
-        private System.Windows.Forms.Button btnImportarExcelClientes;
-        private System.Windows.Forms.Button btnExportarExcelClientes;
+        //private System.Windows.Forms.Button btnImportarExcelClientes;
+        //private System.Windows.Forms.Button btnExportarExcelClientes;
         private System.Windows.Forms.Label lblTotalClientsLabel;
 
         private System.Windows.Forms.TabPage tabProductos;
@@ -786,8 +786,8 @@ namespace GenteFit
         private System.Windows.Forms.Button btnModificarProducto;
         private System.Windows.Forms.Button btnBajaProducto;
         private System.Windows.Forms.Button btnLimpiarProducto;
-        private System.Windows.Forms.Button btnImportarExcelProductos;
-        private System.Windows.Forms.Button btnExportarExcelProductos;
+        //private System.Windows.Forms.Button btnImportarExcelProductos;
+        //private System.Windows.Forms.Button btnExportarExcelProductos;
         private System.Windows.Forms.Label lblTotalProductsLabel;
 
         private System.Windows.Forms.TabPage tabActividades;

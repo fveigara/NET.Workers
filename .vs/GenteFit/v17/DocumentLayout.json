@@ -7,23 +7,23 @@
       "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\views\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|c:\\users\\ferran\\source\\repos\\fveigara\\net.workers\\gentefit\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\gentefit\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|c:\\users\\ferran\\source\\repos\\fveigara\\net.workers\\gentefit\\utils\\xmlimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\utils\\xmlimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|c:\\users\\ferran\\source\\repos\\fveigara\\net.workers\\gentefit\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\gentefit\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|c:\\users\\ferran\\source\\repos\\fveigara\\net.workers\\gentefit\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\gentefit\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|c:\\users\\ferran\\source\\repos\\fveigara\\net.workers\\gentefit\\utils\\xmlexporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\gentefit\\utils\\xmlimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\utils\\xmlimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\gentefit\\utils\\xmlexporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\utils\\xmlexporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -112,14 +112,14 @@
               "RelativeDocumentMoniker": "GenteFit\\Views\\Form1.cs",
               "ToolTip": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Views\\Form1.cs",
               "RelativeToolTip": "GenteFit\\Views\\Form1.cs",
-              "ViewState": "AgIAAEMBAAAAAAAAAAAiwKABAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-14T22:09:08.857Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Producto.cs",
               "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Models\\Producto.cs",
               "RelativeDocumentMoniker": "GenteFit\\Models\\Producto.cs",
@@ -132,13 +132,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "XmlImporter.cs",
               "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Utils\\XmlImporter.cs",
               "RelativeDocumentMoniker": "GenteFit\\Utils\\XmlImporter.cs",
               "ToolTip": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Utils\\XmlImporter.cs",
               "RelativeToolTip": "GenteFit\\Utils\\XmlImporter.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwDgAAABOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-14T22:03:11.271Z",
               "EditorCaption": ""
@@ -151,14 +151,14 @@
               "RelativeDocumentMoniker": "GenteFit\\Utils\\XmlExporter.cs",
               "ToolTip": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Utils\\XmlExporter.cs",
               "RelativeToolTip": "GenteFit\\Utils\\XmlExporter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-14T22:02:04.448Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Models\\Cliente.cs",
               "RelativeDocumentMoniker": "GenteFit\\Models\\Cliente.cs",
@@ -177,7 +177,7 @@
               "RelativeDocumentMoniker": "GenteFit\\Views\\Form1.Designer.cs",
               "ToolTip": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Views\\Form1.Designer.cs",
               "RelativeToolTip": "GenteFit\\Views\\Form1.Designer.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAMDAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAPcCAAAAAAAAAAAowAQDAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T22:10:31.317Z",
               "EditorCaption": ""

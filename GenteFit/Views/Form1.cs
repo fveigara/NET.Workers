@@ -1,7 +1,7 @@
 ﻿using GenteFit.Controllers;
 using GenteFit.Data;
 using GenteFit.Models;
-using GenteFit.Utils;
+//using GenteFit.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -183,88 +183,88 @@ namespace GenteFit
             dgvClientes.ClearSelection();
         }
 
-        private void btnImportarExcelClientes_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog ofd = new OpenFileDialog())
-            {
-                ofd.Filter = "XML (*.xml)|*.xml";
-                ofd.Title = "Importar clientes desde XML";
+        //private void btnImportarExcelClientes_Click(object sender, EventArgs e)
+        //{
+            //using (OpenFileDialog ofd = new OpenFileDialog())
+            //{
+                //ofd.Filter = "XML (*.xml)|*.xml";
+                //ofd.Title = "Importar clientes desde XML";
 
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    try
-                    {
+                //if (ofd.ShowDialog() == DialogResult.OK)
+                //{
+                    //try
+                    //{
                         // Importa directamente a BD (sin duplicados)
-                        Utils.XmlImporter.ImportClientes(ofd.FileName);
+                        //Utils.XmlImporter.ImportClientes(ofd.FileName);
 
-                        CargarClientes();
+                        //CargarClientes();
 
-                        MessageBox.Show(
-                            "Clientes importados correctamente.",
-                            "Importación XML",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Information
-                        );
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(
-                            $"Error importando XML:\n{ex.Message}",
-                            "Error",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error
-                        );
-                    }
-                }
-            }
-        }
+                        //MessageBox.Show(
+                            //"Clientes importados correctamente.",
+                            //"Importación XML",
+                            //MessageBoxButtons.OK,
+                            //MessageBoxIcon.Information
+                        //);
+                    //}
+                    //catch (Exception ex)
+                    //{
+                        //MessageBox.Show(
+                            //$"Error importando XML:\n{ex.Message}",
+                            //"Error",
+                            //MessageBoxButtons.OK,
+                            //MessageBoxIcon.Error
+                        //);
+                    //}
+                //}
+            //}
+        //}
 
-        private void btnExportarExcelClientes_Click(object sender, EventArgs e)
-        {
-            var lista = clientesController.Buscar("");
+        //private void btnExportarExcelClientes_Click(object sender, EventArgs e)
+        //{
+            //var lista = clientesController.Buscar("");
 
-            if (lista.Count == 0)
-            {
-                MessageBox.Show(
-                    "No hay clientes para exportar.",
-                    "Aviso",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information
-                );
-                return;
-            }
+            //if (lista.Count == 0)
+            //{
+                //MessageBox.Show(
+                    //"No hay clientes para exportar.",
+                    //"Aviso",
+                    //MessageBoxButtons.OK,
+                    //MessageBoxIcon.Information
+                //);
+                //return;
+            //}
 
-            using (SaveFileDialog sfd = new SaveFileDialog())
-            {
-                sfd.Filter = "XML (*.xml)|*.xml";
-                sfd.FileName = "clientes.xml";
-                sfd.Title = "Exportar clientes a XML";
+            //using (SaveFileDialog sfd = new SaveFileDialog())
+            //{
+                //sfd.Filter = "XML (*.xml)|*.xml";
+                //sfd.FileName = "clientes.xml";
+                //sfd.Title = "Exportar clientes a XML";
 
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
+                //if (sfd.ShowDialog() == DialogResult.OK)
+                //{
                     // Convertimos DTO → Modelo limpio
-                    var clientes = lista.Select(c => new GenteFit.Models.Cliente
-                    {
-                        Nombre = c.Nombre,
-                        Apellidos = c.Apellidos,
-                        Documento = c.Documento,
-                        Email = c.Email,
-                        Telefono = c.Telefono,
-                        FechaAlta = c.FechaAlta,
-                        IsActive = true
-                    }).ToList();
+                    //var clientes = lista.Select(c => new GenteFit.Models.Cliente
+                    //{
+                        //Nombre = c.Nombre,
+                        //Apellidos = c.Apellidos,
+                        //Documento = c.Documento,
+                        //Email = c.Email,
+                        //Telefono = c.Telefono,
+                        //FechaAlta = c.FechaAlta,
+                        //IsActive = true
+                    //}).ToList();
 
-                    Utils.XmlExporter.ExportClientes(sfd.FileName, clientes);
+                    //Utils.XmlExporter.ExportClientes(sfd.FileName, clientes);
 
-                    MessageBox.Show(
-                        "Clientes exportados correctamente.",
-                        "Exportación XML",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information
-                    );
-                }
-            }
-        }
+                    //MessageBox.Show(
+                        //"Clientes exportados correctamente.",
+                        //"Exportación XML",
+                        //MessageBoxButtons.OK,
+                        //MessageBoxIcon.Information
+                    //);
+                //}
+            //}
+        //}
 
         private void dgvClientes_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -339,82 +339,82 @@ namespace GenteFit
             dgvProductos.ClearSelection();
         }
 
-        private void btnImportarExcelProductos_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog ofd = new OpenFileDialog())
-            {
-                ofd.Filter = "XML (*.xml)|*.xml";
-                ofd.Title = "Importar productos desde XML";
+        //private void btnImportarExcelProductos_Click(object sender, EventArgs e)
+        //{
+            //using (OpenFileDialog ofd = new OpenFileDialog())
+            //{
+                //ofd.Filter = "XML (*.xml)|*.xml";
+                //ofd.Title = "Importar productos desde XML";
 
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    try
-                    {
+                //if (ofd.ShowDialog() == DialogResult.OK)
+                //{
+                    //try
+                    //{
                         // Importación directa a BD (controla duplicados internamente)
-                        Utils.XmlImporter.ImportProductos(ofd.FileName);
+                        //Utils.XmlImporter.ImportProductos(ofd.FileName);
 
-                        CargarProductos();
+                        //CargarProductos();
 
-                        MessageBox.Show(
-                            "Productos importados correctamente.",
-                            "Importación XML",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Information
-                        );
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(
-                            $"Error importando XML:\n{ex.Message}",
-                            "Error",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error
-                        );
-                    }
-                }
-            }
-        }
+                        //MessageBox.Show(
+                            //"Productos importados correctamente.",
+                            //"Importación XML",
+                            //MessageBoxButtons.OK,
+                            //MessageBoxIcon.Information
+                        //);
+                    //}
+                    //catch (Exception ex)
+                    //{
+                        //MessageBox.Show(
+                            //$"Error importando XML:\n{ex.Message}",
+                            //"Error",
+                            //MessageBoxButtons.OK,
+                            //MessageBoxIcon.Error
+                        //);
+                    //}
+                //}
+            //}
+        //}
 
-        private void btnExportarExcelProductos_Click(object sender, EventArgs e)
-        {
-            var lista = productosController.Listar();
+        //private void btnExportarExcelProductos_Click(object sender, EventArgs e)
+        //{
+            //var lista = productosController.Listar();
 
-            if (lista.Count == 0)
-            {
-                MessageBox.Show(
-                    "No hay productos para exportar.",
-                    "Aviso",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information
-                );
-                return;
-            }
+            //if (lista.Count == 0)
+            //{
+                //MessageBox.Show(
+                    //"No hay productos para exportar.",
+                    //"Aviso",
+                    //MessageBoxButtons.OK,
+                    //MessageBoxIcon.Information
+                //);
+                //return;
+            //}
 
-            using (SaveFileDialog sfd = new SaveFileDialog())
-            {
-                sfd.Filter = "XML (*.xml)|*.xml";
-                sfd.FileName = "productos.xml";
-                sfd.Title = "Exportar productos a XML";
+            //using (SaveFileDialog sfd = new SaveFileDialog())
+            //{
+                //sfd.Filter = "XML (*.xml)|*.xml";
+                //sfd.FileName = "productos.xml";
+                //sfd.Title = "Exportar productos a XML";
 
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-                    var productos = lista.Select(p => new GenteFit.Models.Producto
-                    {
-                        Nombre = p.Nombre,
-                        Precio = p.Precio
-                    }).ToList();
+                //if (sfd.ShowDialog() == DialogResult.OK)
+                //{
+                    //var productos = lista.Select(p => new GenteFit.Models.Producto
+                    //{
+                        //Nombre = p.Nombre,
+                        //Precio = p.Precio
+                    //}).ToList();
 
-                    Utils.XmlExporter.ExportProductos(sfd.FileName, productos);
+                    //Utils.XmlExporter.ExportProductos(sfd.FileName, productos);
 
-                    MessageBox.Show(
-                        "Productos exportados correctamente.",
-                        "Exportación XML",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information
-                    );
-                }
-            }
-        }
+                    //MessageBox.Show(
+                        //"Productos exportados correctamente.",
+                        //"Exportación XML",
+                        //MessageBoxButtons.OK,
+                        //MessageBoxIcon.Information
+                    //);
+                //}
+            //}
+        //}
 
         private void txtBuscarProducto_TextChanged(object sender, EventArgs e)
         {
