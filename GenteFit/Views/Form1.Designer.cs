@@ -71,7 +71,6 @@ namespace GenteFit
             this.dgvClientes.AllowUserToDeleteRows = false;
             this.dgvClientes.RowHeadersVisible = false;
             this.dgvClientes.ReadOnly = true;
-            this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.pnlClientes = new System.Windows.Forms.Panel();
 
             // grid
@@ -248,7 +247,6 @@ namespace GenteFit
             this.dgvProductos.AllowUserToDeleteRows = false;
             this.dgvProductos.RowHeadersVisible = false;
             this.dgvProductos.ReadOnly = true;
-            this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.pnlProductos = new System.Windows.Forms.Panel();
 
             this.dgvProductos.Location = new System.Drawing.Point(8, 8);
@@ -380,7 +378,6 @@ namespace GenteFit
             this.dgvActividades.AllowUserToDeleteRows = false;
             this.dgvActividades.RowHeadersVisible = false;
             this.dgvActividades.ReadOnly = true;
-            this.dgvActividades = new System.Windows.Forms.DataGridView();
             this.pnlActividades = new System.Windows.Forms.Panel();
 
             this.dgvActividades.Location = new System.Drawing.Point(8, 8);
@@ -482,7 +479,6 @@ namespace GenteFit
             this.dgvSesiones.AllowUserToDeleteRows = false;
             this.dgvSesiones.RowHeadersVisible = false;
             this.dgvSesiones.ReadOnly = true;
-            this.dgvSesiones = new System.Windows.Forms.DataGridView();
             this.pnlSesiones = new System.Windows.Forms.Panel();
 
             this.dgvSesiones.Location = new System.Drawing.Point(8, 8);
@@ -513,7 +509,6 @@ namespace GenteFit
             this.lblMonitorSesion = new System.Windows.Forms.Label();
             this.txtMonitorSesion = new System.Windows.Forms.TextBox();
             this.lblAforoSesion = new System.Windows.Forms.Label();
-            this.numAforoSesion = new System.Windows.Forms.NumericUpDown();
             this.numAforoSesion.Minimum = 1;
             this.numAforoSesion.Maximum = 100;
             this.numAforoSesion.Value = 16;
@@ -624,19 +619,16 @@ namespace GenteFit
             this.dgvReservasSesiones.AllowUserToDeleteRows = false;
             this.dgvReservasSesiones.RowHeadersVisible = false;
             this.dgvReservasSesiones.ReadOnly = true;
-            this.dgvReservasSesiones = new System.Windows.Forms.DataGridView();
             this.dgvReservasConfirmed.AutoGenerateColumns = true;
             this.dgvReservasConfirmed.AllowUserToAddRows = false;
             this.dgvReservasConfirmed.AllowUserToDeleteRows = false;
             this.dgvReservasConfirmed.RowHeadersVisible = false;
             this.dgvReservasConfirmed.ReadOnly = true;
-            this.dgvReservasConfirmed = new System.Windows.Forms.DataGridView();
             this.dgvReservasWaiting.AutoGenerateColumns = true;
             this.dgvReservasWaiting.AllowUserToAddRows = false;
             this.dgvReservasWaiting.AllowUserToDeleteRows = false;
             this.dgvReservasWaiting.RowHeadersVisible = false;
             this.dgvReservasWaiting.ReadOnly = true;
-            this.dgvReservasWaiting = new System.Windows.Forms.DataGridView();
             this.pnlReservas = new System.Windows.Forms.Panel();
 
             this.dgvReservasSesiones.Location = new System.Drawing.Point(8, 8);
@@ -732,14 +724,6 @@ namespace GenteFit
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasConfirmed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasWaiting)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAforoSesion)).EndInit();
-
-            // Resume layouts
-            this.tabControlMain.ResumeLayout(false);
-            this.tabClientes.ResumeLayout(false);
-            this.tabProductos.ResumeLayout(false);
-            this.tabActividades.ResumeLayout(false);
-            this.tabSesiones.ResumeLayout(false);
-            this.tabReservas.ResumeLayout(false);
 
             this.ResumeLayout(false);
             this.PerformLayout();
