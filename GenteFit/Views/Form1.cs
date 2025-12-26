@@ -93,6 +93,7 @@ namespace GenteFit
 
             lblTotalClientsLabel.Text = $"Total clientes: {lista.Count}";
             RefreshClientesCombo();
+            limpiarCliente();
         }
 
         private void RefreshClientesCombo()
@@ -173,6 +174,17 @@ namespace GenteFit
         }
 
         private void btnLimpiarCliente_Click(object sender, EventArgs e)
+        {
+            txtNombreCliente.Clear();
+            txtApellidosCliente.Clear();
+            txtDocumentoCliente.Clear();
+            txtEmailCliente.Clear();
+            txtTelefonoCliente.Clear();
+            txtBuscarCliente.Clear();
+            dgvClientes.ClearSelection();
+        }
+
+        private void limpiarCliente()
         {
             txtNombreCliente.Clear();
             txtApellidosCliente.Clear();
@@ -299,6 +311,7 @@ namespace GenteFit
             }).ToList();
 
             lblTotalProductsLabel.Text = $"Total productos: {lista.Count}";
+            LimpiarProducto();
         }
 
         private void btnAltaProducto_Click(object sender, EventArgs e)
@@ -332,6 +345,14 @@ namespace GenteFit
         }
 
         private void btnLimpiarProducto_Click(object sender, EventArgs e)
+        {
+            txtBuscarProducto.Text = "";
+            txtNombreProducto.Text = "";
+            txtPrecioProducto.Text = "";
+            dgvProductos.ClearSelection();
+        }
+
+        private void LimpiarProducto()
         {
             txtBuscarProducto.Text = "";
             txtNombreProducto.Text = "";
@@ -467,6 +488,7 @@ namespace GenteFit
             }).ToList();
 
             RefreshActivitiesInSesions();
+            limpiarActividad();
         }
 
         private void btnAltaActividad_Click(object sender, EventArgs e)
@@ -488,9 +510,15 @@ namespace GenteFit
 
         private void btnBajaActividad_Click(object sender, EventArgs e)
         {
-            // no DAO for delete implemented earlier; reuse ActividadDAO if added
             if (dgvActividades.SelectedRows.Count == 0) return;
-            MessageBox.Show("Eliminar actividad: implemente método en ActividadDAO si desea borrado físico.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            int id = (int)dgvActividades.SelectedRows[0].Cells["Id"].Value;
+            string nombre = dgvActividades.SelectedRows[0].Cells["Nombre"].Value?.ToString();
+            var confirm = MessageBox.Show($"¿Eliminar Actividad {nombre}?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (confirm == DialogResult.Yes)
+            {
+                actividadesController.Baja(id);
+                CargarActividades();
+            }
         }
 
         private void dgvActividades_SelectionChanged(object sender, EventArgs e)
@@ -503,6 +531,14 @@ namespace GenteFit
         }
 
         private void btnLimpiarActividad_Click(object sender, EventArgs e)
+        {
+            txtNombreActividad.Clear();
+            txtDescripcionActividad.Clear();
+            cmbIntensidadActividad.SelectedIndex = -1;
+            dgvActividades.ClearSelection();
+        }
+
+        private void limpiarActividad()
         {
             txtNombreActividad.Clear();
             txtDescripcionActividad.Clear();
@@ -540,6 +576,7 @@ namespace GenteFit
             }).ToList();
 
             RefreshSessionsReservationViews();
+            limpiarSesion();
         }
 
         private void RefreshSessionsReservationViews()
@@ -591,11 +628,25 @@ namespace GenteFit
         {
             if (dgvSesiones.SelectedRows.Count == 0) return;
             int id = (int)dgvSesiones.SelectedRows[0].Cells["Id"].Value;
-            // no delete method implemented in SesionDAO earlier; if you want implement Delete
-            MessageBox.Show("Eliminar sesión: implemente método de borrado en SesionDAO si desea borrar.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string Actividad = dgvSesiones.SelectedRows[0].Cells["Actividad"].Value?.ToString();
+            var confirm = MessageBox.Show($"¿Eliminar Sesion {Actividad}?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (confirm == DialogResult.Yes)
+            {
+                sesionesController.Baja(id);
+                CargarSesiones();
+            }
         }
 
         private void btnLimpiarSesion_Click(object sender, EventArgs e)
+        {
+            cmbActividadSesion.SelectedIndex = -1;
+            txtSalaSesion.Clear();
+            txtMonitorSesion.Clear();
+            numAforoSesion.Value = Sesion.CAPACITY_DEFAULT;
+            dgvSesiones.ClearSelection();
+        }
+
+        private void limpiarSesion()
         {
             cmbActividadSesion.SelectedIndex = -1;
             txtSalaSesion.Clear();

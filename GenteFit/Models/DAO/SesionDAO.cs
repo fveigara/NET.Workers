@@ -35,6 +35,17 @@ namespace GenteFit.DAO
             }
         }
 
+        public void Delete(int id)
+        {
+            using (var db = new GenteFitContext())
+            {
+                var s = db.Sesiones.Find(id);
+                if (s == null) return;
+                db.Sesiones.Remove(s);
+                db.SaveChanges();
+            }
+        }
+
         public List<Sesion> ListUpcoming()
         {
             using (var db = new GenteFitContext())

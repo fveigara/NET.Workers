@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|c:\\users\\ferran\\source\\repos\\fveigara\\net.workers\\gentefit\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|c:\\users\\ferran\\source\\repos\\fveigara\\net.workers\\gentefit\\models\\dao\\sesiondao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\models\\dao\\sesiondao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|c:\\users\\ferran\\source\\repos\\fveigara\\net.workers\\gentefit\\views\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\views\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\gentefit\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|c:\\users\\ferran\\source\\repos\\fveigara\\net.workers\\gentefit\\controllers\\sesionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\controllers\\sesionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\gentefit\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\gentefit\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\gentefit\\utils\\xmlimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\utils\\xmlimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\gentefit\\utils\\xmlexporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\utils\\xmlexporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|c:\\users\\ferran\\source\\repos\\fveigara\\net.workers\\gentefit\\models\\sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D5A92FF-C92D-4CD5-834A-75813F65BD6B}|GenteFit\\GenteFit.csproj|solutionrelative:gentefit\\models\\sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 22,
+          "SelectedChildIndex": 21,
           "Children": [
             {
               "$type": "Bookmark",
@@ -105,81 +101,72 @@
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Views\\Form1.cs",
-              "RelativeDocumentMoniker": "GenteFit\\Views\\Form1.cs",
-              "ToolTip": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Views\\Form1.cs",
-              "RelativeToolTip": "GenteFit\\Views\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAACAAAAAAAAAA==",
+              "Title": "SesionDAO.cs",
+              "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Models\\DAO\\SesionDAO.cs",
+              "RelativeDocumentMoniker": "GenteFit\\Models\\DAO\\SesionDAO.cs",
+              "ToolTip": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Models\\DAO\\SesionDAO.cs",
+              "RelativeToolTip": "GenteFit\\Models\\DAO\\SesionDAO.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAqwC0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T22:09:08.857Z",
+              "WhenOpened": "2025-12-26T08:06:59.529Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Producto.cs",
-              "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Models\\Producto.cs",
-              "RelativeDocumentMoniker": "GenteFit\\Models\\Producto.cs",
-              "ToolTip": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Models\\Producto.cs",
-              "RelativeToolTip": "GenteFit\\Models\\Producto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "SesionesController.cs",
+              "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Controllers\\SesionesController.cs",
+              "RelativeDocumentMoniker": "GenteFit\\Controllers\\SesionesController.cs",
+              "ToolTip": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Controllers\\SesionesController.cs",
+              "RelativeToolTip": "GenteFit\\Controllers\\SesionesController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAA9wCQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T22:08:24.334Z",
+              "WhenOpened": "2025-12-26T08:06:45.627Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "XmlImporter.cs",
-              "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Utils\\XmlImporter.cs",
-              "RelativeDocumentMoniker": "GenteFit\\Utils\\XmlImporter.cs",
-              "ToolTip": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Utils\\XmlImporter.cs",
-              "RelativeToolTip": "GenteFit\\Utils\\XmlImporter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAACAAAAAAAAAA==",
+              "Title": "Sesion.cs",
+              "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Models\\Sesion.cs",
+              "RelativeDocumentMoniker": "GenteFit\\Models\\Sesion.cs",
+              "ToolTip": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Models\\Sesion.cs",
+              "RelativeToolTip": "GenteFit\\Models\\Sesion.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA1wA8AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T22:03:11.271Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "XmlExporter.cs",
-              "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Utils\\XmlExporter.cs",
-              "RelativeDocumentMoniker": "GenteFit\\Utils\\XmlExporter.cs",
-              "ToolTip": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Utils\\XmlExporter.cs",
-              "RelativeToolTip": "GenteFit\\Utils\\XmlExporter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T22:02:04.448Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Cliente.cs",
-              "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Models\\Cliente.cs",
-              "RelativeDocumentMoniker": "GenteFit\\Models\\Cliente.cs",
-              "ToolTip": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Models\\Cliente.cs",
-              "RelativeToolTip": "GenteFit\\Models\\Cliente.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T22:01:27.609Z",
+              "WhenOpened": "2025-12-26T08:03:16.992Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Views\\Form1.cs",
+              "RelativeDocumentMoniker": "GenteFit\\Views\\Form1.cs",
+              "ToolTip": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Views\\Form1.cs*",
+              "RelativeToolTip": "GenteFit\\Views\\Form1.cs*",
+              "ViewState": "AgIAAGkCAAAAAAAAAAAuwHwCAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T08:01:27.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Views\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "GenteFit\\Views\\Form1.Designer.cs",
               "ToolTip": "C:\\Users\\Ferran\\source\\repos\\fveigara\\NET.Workers\\GenteFit\\Views\\Form1.Designer.cs",
               "RelativeToolTip": "GenteFit\\Views\\Form1.Designer.cs",
-              "ViewState": "AgIAAOsCAAAAAAAAAAAowAQDAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAEUCAAAAAAAAAAAQwEYCAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T22:10:31.317Z",
+              "WhenOpened": "2025-12-26T08:00:43.391Z",
               "EditorCaption": ""
             }
           ]

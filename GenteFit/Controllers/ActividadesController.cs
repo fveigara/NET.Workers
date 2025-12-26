@@ -22,6 +22,8 @@ namespace GenteFit.Controllers
             dao.Update(new Actividad { Id = id, Nombre = nombre, Descripcion = descripcion, Intensidad = intensidad });
         }
 
+        public void Baja(int id) => dao.Delete(id);
+
         public List<Actividad> Listar() => dao.GetAll();
     }
 }

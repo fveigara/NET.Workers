@@ -1,10 +1,12 @@
-﻿using System;
+﻿using GenteFit.DAO;
+using GenteFit.Data;
+using GenteFit.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GenteFit.DAO;
-using GenteFit.Models;
+using System.Data.Entity;
 
 namespace GenteFit.Controllers
 {
@@ -20,6 +22,20 @@ namespace GenteFit.Controllers
         public void Editar(Sesion s) => dao.Update(s);
 
         public List<Sesion> ListarProximas() => dao.ListUpcoming();
+
+        public List<Sesion> ObtenerSesiones()
+        {
+            using (var db = new GenteFitContext())
+            {
+                return db.Sesiones
+                         .Include(s => s.Actividad)
+                         .Include(s => s.Reservas.Select(r => r.Cliente))
+                         .ToList();
+            }
+        }
+
+        public void Baja(int id) => dao.Delete(id);
+
         public Sesion GetById(int id) => dao.GetById(id);
     }
 }

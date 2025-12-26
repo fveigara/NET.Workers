@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using GenteFit.Models;
 
 namespace GenteFit.Data
@@ -11,7 +9,7 @@ namespace GenteFit.Data
     {
         public static void Initialize(GenteFitContext db)
         {
-            // Ejecutar SOLO si la BD está vacía
+            // Ejecutar SOLO una vez
             if (db.Clientes.Any() || db.Actividades.Any())
                 return;
 
@@ -23,16 +21,15 @@ namespace GenteFit.Data
             var rolAdmin = new Rol { Nombre = "Administrador" };
             var rolCliente = new Rol { Nombre = "Cliente" };
 
-            db.Roles.Add(rolAdmin);
-            db.Roles.Add(rolCliente);
+            db.Roles.AddRange(new[] { rolAdmin, rolCliente });
             db.SaveChanges();
 
             // =====================================================
-            // 2) ACTIVIDADES (5)
+            // 2) ACTIVIDADES
             // =====================================================
             var actividades = new[]
             {
-                new Actividad { Nombre = "Yoga", Intensidad = Intensidad.Baja,  Descripcion = "Relajación" },
+                new Actividad { Nombre = "Yoga", Intensidad = Intensidad.Baja, Descripcion = "Relajación" },
                 new Actividad { Nombre = "Pilates", Intensidad = Intensidad.Media, Descripcion = "Control postural" },
                 new Actividad { Nombre = "CrossFit", Intensidad = Intensidad.Alta, Descripcion = "Alta intensidad" },
                 new Actividad { Nombre = "Spinning", Intensidad = Intensidad.Alta, Descripcion = "Bicicleta indoor" },
@@ -43,7 +40,7 @@ namespace GenteFit.Data
             db.SaveChanges();
 
             // =====================================================
-            // 3) SESIONES (10)
+            // 3) SESIONES
             // =====================================================
             var actividadIds = db.Actividades.Select(a => a.Id).ToList();
 
@@ -52,9 +49,11 @@ namespace GenteFit.Data
                 db.Sesiones.Add(new Sesion
                 {
                     ActividadId = actividadIds[rnd.Next(actividadIds.Count)],
-                    FechaHora = DateTime.Now.Date.AddDays(rnd.Next(1, 14)).AddHours(rnd.Next(8, 21)),
-                    Sala = "Sala " + rnd.Next(1, 4),
-                    Monitor = "Monitor " + (char)('A' + rnd.Next(5)),
+                    FechaHora = DateTime.Now.Date
+                        .AddDays(rnd.Next(1, 14))
+                        .AddHours(rnd.Next(8, 21)),
+                    Sala = $"Sala {rnd.Next(1, 4)}",
+                    Monitor = $"Monitor {(char)('A' + rnd.Next(5))}",
                     AforoMax = 16
                 });
             }
@@ -62,7 +61,7 @@ namespace GenteFit.Data
             db.SaveChanges();
 
             // =====================================================
-            // 4) CLIENTES (20)
+            // 4) CLIENTES
             // =====================================================
             var clientes = new List<Cliente>();
 
@@ -74,8 +73,8 @@ namespace GenteFit.Data
                     Apellidos = "Demo",
                     Documento = $"{10000000 + i}A",
                     Email = $"cliente{i + 1}@demo.com",
-                    Telefono = "600000" + i.ToString("D2"),
-                    FechaAlta = DateTime.Now.AddDays(-rnd.Next(1, 300)),
+                    Telefono = $"600000{i:D2}",
+                    FechaAlta = DateTime.Now.AddDays(-rnd.Next(30, 300)),
                     IsActive = true
                 });
             }
@@ -84,18 +83,18 @@ namespace GenteFit.Data
             db.SaveChanges();
 
             // =====================================================
-            // 5) ASIGNAR ROLES AUTOMÁTICOS
+            // 5) ROLES CLIENTE
             // =====================================================
-            foreach (var cliente in db.Clientes)
+            foreach (var c in clientes)
             {
                 db.ClienteRoles.Add(new ClienteRol
                 {
-                    ClienteId = cliente.Id,
+                    ClienteId = c.Id,
                     RolId = rolCliente.Id
                 });
             }
 
-            // Cliente admin
+            // ADMIN
             var admin = new Cliente
             {
                 Nombre = "Admin",
@@ -122,16 +121,16 @@ namespace GenteFit.Data
             // 6) RESERVAS COHERENTES
             // =====================================================
             var sesiones = db.Sesiones.ToList();
-            var clientesIds = db.Clientes.Select(c => c.Id).ToList();
+            var clientesIds = clientes.Select(c => c.Id).ToList(); // SIN admin
 
             foreach (var ses in sesiones)
             {
-                var clientesUsados = new HashSet<int>();
+                var usados = new HashSet<int>();
 
                 int confirmadas = rnd.Next(0, ses.AforoMax + 1);
                 int espera = rnd.Next(0, 5);
 
-                // Confirmadas
+                // CONFIRMADAS
                 for (int i = 0; i < confirmadas; i++)
                 {
                     int clienteId;
@@ -139,18 +138,18 @@ namespace GenteFit.Data
                     {
                         clienteId = clientesIds[rnd.Next(clientesIds.Count)];
                     }
-                    while (!clientesUsados.Add(clienteId));
+                    while (!usados.Add(clienteId));
 
                     db.Reservas.Add(new Reserva
                     {
-                        SesionId = ses.Id,
                         ClienteId = clienteId,
+                        SesionId = ses.Id,
                         Estado = EstadoReserva.Confirmada,
-                        CreatedAt = DateTime.Now.AddMinutes(-rnd.Next(0, 5000))
+                        CreatedAt = DateTime.Now.AddMinutes(-rnd.Next(1000, 10000))
                     });
                 }
 
-                // Lista de espera SOLO si está lleno
+                // LISTA DE ESPERA SOLO SI ESTÁ LLENA
                 if (confirmadas >= ses.AforoMax)
                 {
                     for (int i = 0; i < espera; i++)
@@ -160,15 +159,15 @@ namespace GenteFit.Data
                         {
                             clienteId = clientesIds[rnd.Next(clientesIds.Count)];
                         }
-                        while (!clientesUsados.Add(clienteId));
+                        while (!usados.Add(clienteId));
 
                         db.Reservas.Add(new Reserva
                         {
-                            SesionId = ses.Id,
                             ClienteId = clienteId,
+                            SesionId = ses.Id,
                             Estado = EstadoReserva.EnEspera,
                             PosicionEspera = i + 1,
-                            CreatedAt = DateTime.Now.AddMinutes(-rnd.Next(0, 5000))
+                            CreatedAt = DateTime.Now.AddMinutes(-rnd.Next(1000, 10000))
                         });
                     }
                 }

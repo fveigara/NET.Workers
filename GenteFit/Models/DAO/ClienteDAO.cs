@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace GenteFit.DAO
 {
@@ -68,6 +69,16 @@ namespace GenteFit.DAO
         {
             using (var db = new GenteFitContext())
                 return db.Clientes.Where(x => x.IsActive).ToList();
+        }
+
+        public List<Cliente> GetAll()
+        {
+            using (var ctx = new GenteFitContext())
+            {
+                return ctx.Clientes
+                          .Include(c => c.Reservas)
+                          .ToList();
+            }
         }
     }
 }

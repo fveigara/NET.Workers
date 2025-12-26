@@ -112,6 +112,7 @@
     <Compile Include="Models\DAO\ProductoDAO.cs" />
     <Compile Include="Models\DAO\ClienteDAO.cs" />
     <Compile Include="Models\Data\SeedData.cs" />
+    <Compile Include="Models\DTO\ClienteDTO.cs" />
     <Compile Include="Models\Reserva.cs" />
     <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\Sesion.cs" />
