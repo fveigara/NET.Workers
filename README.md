@@ -1,2 +1,2 @@
 # NET.Workers
-Repositorio del proyecto de GenteFit en técnicas de persistencia datos con .NET y programas ERP
+Repository of the GenteFit project on data persistence techniques with .NET and ERP programs
